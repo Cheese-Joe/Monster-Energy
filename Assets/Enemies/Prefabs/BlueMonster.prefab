@@ -152,6 +152,9 @@ MonoBehaviour:
   damage: 2
   hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}
   moneyCount: {fileID: 11400000, guid: a7bccafcec4deca47b9ceac7d69169fa, type: 2}
+  HowMuchMoney: 5
+  flying: 0
+  WhichBullet: BlueBullet
 --- !u!50 &6243222772777903841
 Rigidbody2D:
   serializedVersion: 4

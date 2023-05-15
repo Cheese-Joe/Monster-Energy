@@ -16,7 +16,7 @@ public class neuralActivation : MonoBehaviour
     public int HowMuchMoney;
     public bool flying;
     private Rigidbody2D rb2d;
-
+    public string WhichBullet;
 
     void Start()
     {
@@ -50,22 +50,19 @@ public class neuralActivation : MonoBehaviour
                 transform.Translate(Vector3.left * speed);
                 _renderer.flipX = false;
             }
-            if (flying == true)
+            if (transform.position.y - player.transform.position.y < -2)
             {
-                if (transform.position.y - player.transform.position.y < -2)
-                {
-                    transform.Translate(Vector3.up * speed);
-                }
-                else if (transform.position.y - player.transform.position.y > 2)
-                {
-                    transform.Translate(Vector3.down * speed);
-                }
+                transform.Translate(Vector3.up * speed);
+            }
+            else if (transform.position.y - player.transform.position.y > 2)
+            {
+                transform.Translate(Vector3.down * speed);
             }
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.tag == "BlueBullet")
+        if (collision.transform.tag == WhichBullet)
         {
             moneyCount.Money = moneyCount.Money + HowMuchMoney;
             Debug.Log("Bullet");
