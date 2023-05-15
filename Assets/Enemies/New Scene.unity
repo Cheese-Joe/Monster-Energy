@@ -326,9 +326,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6243222772777903842, guid: 5591d7585cc672244ad8615d90a00c95,
         type: 3}
+      propertyPath: flying
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243222772777903842, guid: 5591d7585cc672244ad8615d90a00c95,
+        type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 947924901}
+    - target: {fileID: 6243222772777903842, guid: 5591d7585cc672244ad8615d90a00c95,
+        type: 3}
+      propertyPath: HowMuchMoney
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5591d7585cc672244ad8615d90a00c95, type: 3}
 --- !u!1 &474072396
@@ -971,7 +981,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

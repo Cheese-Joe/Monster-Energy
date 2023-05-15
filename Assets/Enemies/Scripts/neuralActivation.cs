@@ -13,13 +13,20 @@ public class neuralActivation : MonoBehaviour
     private SpriteRenderer _renderer;
     public HP_system hp;
     public MoneyCount moneyCount;
+    public int HowMuchMoney;
+    public bool flying;
+    private Rigidbody2D rb2d;
 
 
     void Start()
     {
         animator = GetComponent<Animator>();
         _renderer = GetComponent<SpriteRenderer>();
-
+        rb2d = GetComponent<Rigidbody2D>();
+        if (flying == true)
+        {
+            rb2d.gravityScale = 0f;
+        }
     }
 
 
@@ -33,15 +40,26 @@ public class neuralActivation : MonoBehaviour
         else
         {
             animator.SetBool("NeuralActivation", false);
-            if (transform.position.x - player.transform.position.x < 0)
+            if (transform.position.x - player.transform.position.x < -2)
             {
                 transform.Translate(Vector3.right * speed);
                 _renderer.flipX = true;
             }
-            else if (transform.position.x - player.transform.position.x > 0)
+            else if (transform.position.x - player.transform.position.x > 2)
             {
                 transform.Translate(Vector3.left * speed);
                 _renderer.flipX = false;
+            }
+            if (flying == true)
+            {
+                if (transform.position.y - player.transform.position.y < -2)
+                {
+                    transform.Translate(Vector3.up * speed);
+                }
+                else if (transform.position.y - player.transform.position.y > 2)
+                {
+                    transform.Translate(Vector3.down * speed);
+                }
             }
         }
     }
@@ -49,7 +67,7 @@ public class neuralActivation : MonoBehaviour
     {
         if (collision.transform.tag == "BlueBullet")
         {
-            moneyCount.Money = moneyCount.Money + 5;
+            moneyCount.Money = moneyCount.Money + HowMuchMoney;
             Debug.Log("Bullet");
             Destroy(this.gameObject);
         }
