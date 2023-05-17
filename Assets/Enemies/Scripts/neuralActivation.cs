@@ -17,7 +17,7 @@ public class neuralActivation : MonoBehaviour
     public bool flying;
     private Rigidbody2D rb2d;
     public string WhichBullet;
-
+    public int HP_enemy;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -64,9 +64,13 @@ public class neuralActivation : MonoBehaviour
     {
         if (collision.transform.tag == WhichBullet)
         {
-            moneyCount.Money = moneyCount.Money + HowMuchMoney;
-            Debug.Log("Bullet");
-            Destroy(this.gameObject);
+            HP_enemy = HP_enemy - 1;
+            if (HP_enemy < 1)
+            {
+                moneyCount.Money = moneyCount.Money + HowMuchMoney;
+                Debug.Log("Bullet");
+                Destroy(this.gameObject);
+            }
         }
         if (collision.transform.tag == "Player")
         {
