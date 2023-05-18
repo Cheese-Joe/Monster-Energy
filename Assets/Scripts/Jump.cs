@@ -10,7 +10,7 @@ public class Jump : MonoBehaviour
     public float jumpForce = 10f;
     public Transform groundCheck;
     public LayerMask groundLayer;
-    bool isGrounded;
+    public bool isGrounded;
     public Animator animator;
 
     void Start()
