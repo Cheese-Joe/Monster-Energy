@@ -12,7 +12,12 @@ public class Attack1 : MonoBehaviour
     public float gunDuration;
     public GameObject projectile;
     public GameObject medpack;
-    private Vector3 
+    private Vector3 currentLocation;
+    bool waitWait;
+    public float waitForAttack;
+    public int randomSpawn;
+    private int attacks;
+    public GameObject selfDestruction;
 
     // Start is called before the first frame update
     void Awake()
@@ -21,6 +26,30 @@ public class Attack1 : MonoBehaviour
     }
     private void Update()
     {
-        Instantiate(projectile, new Vector3(15, -12.47f, -8), Quaternion.Euler(new Vector3(90, 0, 0)));
+        if (!waitWait)
+        {
+            currentLocation = transform.position;
+            StartCoroutine(waitToAttack());
+        }
+    }
+    IEnumerator waitToAttack()
+    {
+        waitWait = true;
+        yield return new WaitForSeconds(waitForAttack);
+        randomSpawn = Random.Range(0, 3);
+        if (randomSpawn == 1)
+        {
+            Instantiate(medpack, currentLocation, Quaternion.Euler(new Vector3(0, -180, -180)));
+        }
+        else
+        {
+            Instantiate(projectile, currentLocation, Quaternion.Euler(new Vector3(0, 0, 0)));
+        }
+        attacks++;
+        if (attacks == 10)
+        {
+            Destroy(selfDestruction);
+        }
+        waitWait = false;
     }
 }

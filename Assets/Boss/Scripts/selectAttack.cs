@@ -7,6 +7,7 @@ public class selectAttack : MonoBehaviour
     public GameObject[] selectedAttack;
     private bool waitWait = false;
     public float waitForAttack;
+    public int randomAttack;
 
     void Start()
     {
@@ -24,8 +25,8 @@ public class selectAttack : MonoBehaviour
     {
         waitWait = true;
         yield return new WaitForSeconds(waitForAttack);
-        selectedAttack[0].SetActive(true);
-        Instantiate(selectedAttack[0]);
+        randomAttack = Random.Range(0, selectedAttack.Length);
+        Instantiate(selectedAttack[randomAttack]);
         Debug.Log("aaa");
         waitWait = false;
     }

@@ -6,9 +6,11 @@ using DG.Tweening;
 
 public class controlProjectile : MonoBehaviour
 {
+    public GameObject selfdestruct;
     void Awake()
     {
-        transform.DOMoveX(-10f, 5f).SetRelative(true).SetLoops(-1, LoopType.Incremental);    
+        transform.DOMoveX(-100f, 10f).SetRelative(true).SetLoops(-1, LoopType.Incremental);
+        Destroy(selfdestruct, 10f);
     }
 }
 
