@@ -18,6 +18,7 @@ public class Attack1 : MonoBehaviour
     public int randomSpawn;
     private int attacks;
     public GameObject selfDestruction;
+    public HP_system hp;
 
     // Start is called before the first frame update
     void Awake()
@@ -36,7 +37,14 @@ public class Attack1 : MonoBehaviour
     {
         waitWait = true;
         yield return new WaitForSeconds(waitForAttack);
-        randomSpawn = Random.Range(0, 3);
+        if (hp.HP_current < 3)
+        {
+            randomSpawn = Random.Range(0, 3);
+        }
+        else
+        {
+            randomSpawn = Random.Range(0, 6);
+        }
         if (randomSpawn == 1)
         {
             Instantiate(medpack, currentLocation, Quaternion.Euler(new Vector3(0, -180, -180)));

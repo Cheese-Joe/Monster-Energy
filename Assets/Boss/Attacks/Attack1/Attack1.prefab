@@ -131,3 +131,4 @@ MonoBehaviour:
   waitForAttack: 1
   randomSpawn: 0
   selfDestruction: {fileID: 3621170165161063541}
+  hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}

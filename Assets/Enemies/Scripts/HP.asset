@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: HP
   m_EditorClassIdentifier: 
   HP_max: 10
-  HP_current: 4
+  HP_current: 1
