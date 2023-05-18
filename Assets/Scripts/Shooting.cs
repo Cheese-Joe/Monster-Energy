@@ -12,24 +12,24 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.C) && weapon == 1)
+        if(Input.GetKeyDown(KeyCode.Q) && weapon == 1 || Input.GetKeyDown(KeyCode.C) && weapon == 1)
         {
             weapon = 2;
         }
-        else if(Input.GetKeyDown(KeyCode.C) && weapon == 2)
+        else if(Input.GetKeyDown(KeyCode.Q) && weapon == 2 || Input.GetKeyDown(KeyCode.C) && weapon == 2)
         {
             weapon = 3;
         }
-        else if (Input.GetKeyDown(KeyCode.C) && weapon == 3)
+        else if (Input.GetKeyDown(KeyCode.Q) && weapon == 3 || Input.GetKeyDown(KeyCode.C) && weapon == 3)
         {
             weapon = 1;
         }
 
-        if (Input.GetKeyDown(KeyCode.X) && weapon == 1)
+        if (Input.GetKeyDown(KeyCode.E) && weapon == 1 || Input.GetKeyDown(KeyCode.X) && weapon == 1)
             Instantiate(bullet, firePos.position, firePos.rotation);
-        else if (Input.GetKeyDown(KeyCode.X) && weapon == 2)
+        else if (Input.GetKeyDown(KeyCode.E) && weapon == 2 || Input.GetKeyDown(KeyCode.X) && weapon == 2)
             Instantiate(bullet2, firePos.position, firePos.rotation);
-        else if (Input.GetKeyDown(KeyCode.X) && weapon == 3)
+        else if (Input.GetKeyDown(KeyCode.E) && weapon == 3 || Input.GetKeyDown(KeyCode.X) && weapon == 3)
             Instantiate(bullet3, firePos.position, firePos.rotation);
     }
 }
