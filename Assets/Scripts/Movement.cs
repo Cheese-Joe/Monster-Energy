@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public Vector2 speed = new Vector2(1, 0);
+    public float speed = 8;
     public Animator animator;
     public Transform groundCheck;
     public LayerMask groundLayer;
@@ -23,7 +23,7 @@ public class Movement : MonoBehaviour
 
         isGrounded = Physics2D.OverlapCapsule(groundCheck.position, new Vector2(0.14f, 0.07f), CapsuleDirection2D.Horizontal, 0, groundLayer);
 
-        Vector2 movement = new Vector2(speed.x * inputX, 0);
+        Vector2 movement = new Vector2(speed * inputX, 0);
 
         movement *= Time.deltaTime;
 
@@ -37,6 +37,11 @@ public class Movement : MonoBehaviour
         {
             gameObject.transform.localScale = new Vector3(-1, 1, 0);
         }
+
+        if(Input.GetKey(KeyCode.X) || Input.GetKey(KeyCode.E))
+            speed = 12;
+        else
+            speed = 8;
 
         if (inputX != 0)
             animator.SetBool("isRuning", true);
