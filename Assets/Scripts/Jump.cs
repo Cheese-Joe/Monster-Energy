@@ -23,7 +23,7 @@ public class Jump : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCapsule(groundCheck.position, new Vector2(0.14f, 0.07f), CapsuleDirection2D.Horizontal, 0, groundLayer);
 
-        if (Input.GetKeyDown(KeyCode.Z) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded || Input.GetKeyDown(KeyCode.Z) && isGrounded)
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
 
         if(isGrounded)
