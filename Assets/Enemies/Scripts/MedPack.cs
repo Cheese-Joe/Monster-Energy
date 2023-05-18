@@ -16,9 +16,16 @@ public class MedPack : MonoBehaviour
     {
         if (collision.transform.tag == "Player")
         {
-            hp.HP_current = hp.HP_current + heal;
-            Debug.Log("Player");
-            Destroy(this.gameObject);
+            if (hp.HP_current < hp.HP_max)
+            {
+                hp.HP_current = hp.HP_current + heal;
+                if (hp.HP_current > hp.HP_max)
+                {
+                    hp.HP_current = hp.HP_max;
+                }
+                Debug.Log("Player");
+                Destroy(this.gameObject);
+            }
         }
     }
 }
