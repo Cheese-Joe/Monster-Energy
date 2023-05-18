@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Zakhar/Zakhar/MainMenuScene.unity
+    path: Assets/Zakhar/MainMenuScene.unity
     guid: bd14276c33b195e4690fa18ab31c81aa
   - enabled: 1
-    path: Assets/Zakhar/Zakhar/Level 1.unity
+    path: Assets/Zakhar/Level 1.unity
     guid: aba778d9af31c2c4a961b1bd33fd2ae9
   - enabled: 1
     path: Assets/Blackjack/BlackJack.unity
