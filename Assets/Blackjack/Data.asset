@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eccef27729115e24dada9fffbe27fe89, type: 3}
   m_Name: Data
   m_EditorClassIdentifier: 
-  Money: 41
+  Money: 10
   moneyLeft: 39
   currentBet: 2
