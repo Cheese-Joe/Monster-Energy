@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4445798576201325431}
   - component: {fileID: 4445798576201325428}
+  - component: {fileID: 311387917589833763}
   m_Layer: 0
   m_Name: tentacle 2
   m_TagString: Untagged
@@ -85,6 +86,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &311387917589833763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4445798576201325429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b911e6d4d3a0a0743a2a328356d81feb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}
+  damage: 1
+  destroyOnCollision: 0
 --- !u!1 &4445798577570999952
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,6 +111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4445798577570999954}
   - component: {fileID: 4445798577570999955}
+  - component: {fileID: 2787305887921187462}
   m_Layer: 0
   m_Name: tentacle 1
   m_TagString: Untagged
@@ -170,6 +187,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2787305887921187462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4445798577570999952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b911e6d4d3a0a0743a2a328356d81feb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}
+  damage: 1
+  destroyOnCollision: 0
 --- !u!1 &4445798577668919805
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4445798577823878567}
   - component: {fileID: 4445798577823878564}
+  - component: {fileID: 7380134435539729412}
   m_Layer: 0
   m_Name: tentacle 3
   m_TagString: Untagged
@@ -317,3 +350,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7380134435539729412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4445798577823878565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b911e6d4d3a0a0743a2a328356d81feb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}
+  damage: 1
+  destroyOnCollision: 0

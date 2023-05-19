@@ -19,6 +19,8 @@ public class Attack1 : MonoBehaviour
     private int attacks;
     public GameObject selfDestruction;
     public HP_system hp;
+    public bossSpeedChanger boss;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -45,6 +47,8 @@ public class Attack1 : MonoBehaviour
         {
             randomSpawn = Random.Range(0, 6);
         }
+        boss.XPos = 1f;
+        boss.YPos = 0f;
         if (randomSpawn == 1)
         {
             Instantiate(medpack, currentLocation, Quaternion.Euler(new Vector3(0, -180, -180)));

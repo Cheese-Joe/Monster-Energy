@@ -132,3 +132,4 @@ MonoBehaviour:
   randomSpawn: 0
   selfDestruction: {fileID: 3621170165161063541}
   hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}
+  boss: {fileID: 11400000, guid: 62baff5dff1d38f47a76d92a6258223d, type: 2}

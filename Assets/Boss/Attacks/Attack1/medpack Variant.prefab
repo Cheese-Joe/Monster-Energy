@@ -103,3 +103,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfdestruct: {fileID: 8205054913384193601}
+  boss: {fileID: 11400000, guid: 62baff5dff1d38f47a76d92a6258223d, type: 2}

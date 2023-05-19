@@ -7,4 +7,6 @@ using UnityEngine;
 public class bossSpeedChanger : ScriptableObject
 {
     public int bossColor;
+    public float XPos;
+    public float YPos;
 }

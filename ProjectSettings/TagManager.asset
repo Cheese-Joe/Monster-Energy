@@ -8,6 +8,9 @@ TagManager:
   - BlueBullet
   - Floor
   - Fireball
+  - floorfloor
+  - GreenBullet
+  - RedBullet
   layers:
   - Default
   - TransparentFX
