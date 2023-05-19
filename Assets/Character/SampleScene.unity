@@ -1006,6 +1006,11 @@ PrefabInstance:
       propertyPath: bullet3
       value: 
       objectReference: {fileID: 140505800}
+    - target: {fileID: 1297116227646370246, guid: bca5d653f6680fa419460e72755c3d80,
+        type: 3}
+      propertyPath: jumpForce
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3890682549957399371, guid: bca5d653f6680fa419460e72755c3d80,
         type: 3}
       propertyPath: m_RootOrder
