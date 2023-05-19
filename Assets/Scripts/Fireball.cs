@@ -9,7 +9,7 @@ public class Fireball : MonoBehaviour
     public Transform Check;
     public LayerMask groundLayer;
 
-    bool check;
+    public bool check;
 
     void Start()
     {
@@ -30,7 +30,12 @@ public class Fireball : MonoBehaviour
             bulletSpeed = 30;
         }
 
-        if (check)
-            Destroy(gameObject);
+        Destroy(gameObject, 2f);
+
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
+
     }
 }

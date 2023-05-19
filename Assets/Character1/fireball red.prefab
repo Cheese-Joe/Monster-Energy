@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7200117170336446579}
   m_Layer: 0
   m_Name: lcheck
-  m_TagString: Untagged
+  m_TagString: RedBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,11 +151,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 30
-  lCheck: {fileID: 7200117170336446576}
-  rCheck: {fileID: 7200117171071515248}
+  Check: {fileID: 7200117170336446576}
   groundLayer:
     serializedVersion: 2
     m_Bits: 72
+  check: 0
 --- !u!50 &7200117170927736652
 Rigidbody2D:
   serializedVersion: 4
@@ -187,7 +187,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 7200117171071515251}
   m_Layer: 0
   m_Name: rcheck
-  m_TagString: Untagged
+  m_TagString: RedBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

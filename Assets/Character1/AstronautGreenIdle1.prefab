@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2255d3f557976144795ba553b1f4b12c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 12, y: 0}
+  speed: 8
   animator: {fileID: 0}
   groundCheck: {fileID: 357488017550256708}
   groundLayer:
@@ -203,7 +203,6 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 72
-  isGrounded: 0
   animator: {fileID: 0}
 --- !u!114 &357488017627465483
 MonoBehaviour:
@@ -218,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePos: {fileID: 357488017744139466}
-  bullet: {fileID: 4861683286576063370, guid: a12d338d20d5e12459ca22db6a45723d, type: 3}
+  bullet: {fileID: 5393479410914524958, guid: 27bb1902866f82d48903d00357435733, type: 3}
   bullet2: {fileID: 5393479410914524958, guid: 885507b0db71e9341978c5e910d53b24, type: 3}
   bullet3: {fileID: 7200117170927736649, guid: 18d34c5b2dfdc3c48a65e0a66d1d2834, type: 3}
   weapon: 1
