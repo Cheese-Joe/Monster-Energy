@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ad89bece92e2845a6dfaed18b05d72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 357488017627465481, guid: 652ec2b6db9b37844814f6d741f2c828, type: 3}
   speed: 0.01
   damage: 2
   hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}
