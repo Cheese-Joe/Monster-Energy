@@ -9,6 +9,7 @@ public class neuralActivation : MonoBehaviour
     private Animator animator;
     public GameObject player;
     public float speed;
+    public float speedY;
     public int damage;
     private SpriteRenderer _renderer;
     public HP_system hp;
@@ -40,23 +41,23 @@ public class neuralActivation : MonoBehaviour
         else
         {
             animator.SetBool("NeuralActivation", false);
-            if (transform.position.x - player.transform.position.x < -2)
+            if (transform.position.x - player.transform.position.x < -1f)
             {
                 transform.Translate(Vector3.right * speed);
                 _renderer.flipX = true;
             }
-            else if (transform.position.x - player.transform.position.x > 2)
+            else if (transform.position.x - player.transform.position.x > 1f)
             {
                 transform.Translate(Vector3.left * speed);
                 _renderer.flipX = false;
             }
-            if (transform.position.y - player.transform.position.y < -2)
+            if (transform.position.y - player.transform.position.y < -1f)
             {
-                transform.Translate(Vector3.up * speed);
+                transform.Translate(Vector3.up * speedY);
             }
-            else if (transform.position.y - player.transform.position.y > 2)
+            else if (transform.position.y - player.transform.position.y > 1f)
             {
-                transform.Translate(Vector3.down * speed);
+                transform.Translate(Vector3.down * speedY);
             }
         }
     }

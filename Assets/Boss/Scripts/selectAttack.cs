@@ -17,7 +17,9 @@ public class selectAttack : MonoBehaviour
 
     void Start()
     {
-        
+
+        hp_boss.HP_current = hp_boss.HP_max;
+
     }
 
     void Update()

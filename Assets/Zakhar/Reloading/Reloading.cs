@@ -35,7 +35,7 @@ public class Reloading : MonoBehaviour
 
             }
 
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.X))
             {
                 if (ammo > 0)
                 {

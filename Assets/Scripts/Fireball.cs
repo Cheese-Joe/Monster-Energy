@@ -6,12 +6,10 @@ public class Fireball : MonoBehaviour
 {
     public float bulletSpeed;
     Rigidbody2D rb;
-    public Transform lCheck;
-    public Transform rCheck;
+    public Transform Check;
     public LayerMask groundLayer;
 
-    bool rcheck;
-    bool lcheck;
+    public bool check;
 
     void Start()
     {
@@ -21,19 +19,23 @@ public class Fireball : MonoBehaviour
 
     void Update()
     {
-        rcheck = Physics2D.OverlapCapsule(rCheck.position, new Vector2(0.14f, 0.07f), CapsuleDirection2D.Horizontal, 0, groundLayer);
-        lcheck = Physics2D.OverlapCapsule(lCheck.position, new Vector2(0.14f, 0.07f), CapsuleDirection2D.Horizontal, 0, groundLayer);
+        check = Physics2D.OverlapCapsule(Check.position, new Vector2(0.14f, 0.07f), CapsuleDirection2D.Horizontal, 0, groundLayer);
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
             bulletSpeed = -30;
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
             bulletSpeed = 30;
         }
 
-        if (rcheck || lcheck)
-            Destroy(gameObject);
+        Destroy(gameObject, 2f);
+
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
+
     }
 }

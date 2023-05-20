@@ -22,7 +22,12 @@ public class Attack3 : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         currentLocation = transform.position;
-        boss.YPos = -0.7f/2;
+
+        boss.YPos = 0/2;
+        boss.XPos = 1f / 2;
+        Instantiate(projectile, currentLocation, Quaternion.Euler(new Vector3(0, 0, 0)));
+        boss.YPos = -0.7f / 2;
+
         boss.XPos = 0.7f / 2;
         Instantiate(projectile, currentLocation, Quaternion.Euler(new Vector3(0, 0, 0)));
         boss.YPos = -0.66f / 2;
@@ -46,8 +51,13 @@ public class Attack3 : MonoBehaviour
         boss.YPos = -0.66f / 2;
         boss.XPos = -0.75f / 2;
         Instantiate(projectile, currentLocation, Quaternion.Euler(new Vector3(0, 0, 0)));
-        boss.YPos = -0.7f / 2;  
-        boss.XPos = -0.7f / 2   ;
+
+        boss.YPos = 0 / 2;  
+        boss.XPos = -1f / 2   ;
+        Instantiate(projectile, currentLocation, Quaternion.Euler(new Vector3(0, 0, 0)));
+        boss.YPos = -0.7f / 2;
+        boss.XPos = -0.7f / 2;
+
         Instantiate(projectile, currentLocation, Quaternion.Euler(new Vector3(0, 0, 0)));
         Destroy(selfDestruction);
 

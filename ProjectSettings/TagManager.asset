@@ -4,18 +4,22 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Canvas
+  - Floor
+  - floorfloor
   - BlueBullet
+
   - Floor
   - Fireball
   - floorfloor
+
   - GreenBullet
   - RedBullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - ground
+
+  - Ground
   - Water
   - UI
   - 

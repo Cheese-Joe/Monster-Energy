@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Subsystems;
 
 public class Movement : MonoBehaviour
 {
-    public Vector2 speed = new Vector2(1, 0);
+    public float speed = 8;
     public Animator animator;
     public Transform groundCheck;
     public LayerMask groundLayer;
     public float inputX;
 
     bool isGrounded;
+    bool stop;
+    private Animation go;
 
     void Start()
     {
@@ -23,7 +26,8 @@ public class Movement : MonoBehaviour
 
         isGrounded = Physics2D.OverlapCapsule(groundCheck.position, new Vector2(0.14f, 0.07f), CapsuleDirection2D.Horizontal, 0, groundLayer);
 
-        Vector2 movement = new Vector2(speed.x * inputX, 0);
+
+        Vector2 movement = new Vector2(speed * inputX, 0);
 
         movement *= Time.deltaTime;
 
@@ -39,8 +43,17 @@ public class Movement : MonoBehaviour
         }
 
         if (inputX != 0)
-            animator.SetBool("isRuning", true);
+        {
+            animator.SetBool("isRunning", true);
+            stop = true;
+        }
+
         else
-            animator.SetBool("isRuning", false);
+            animator.SetBool("isRunning", false);
+
+       
+
+      
     }
+
 }
