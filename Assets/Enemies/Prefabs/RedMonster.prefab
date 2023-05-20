@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6243222772777903842}
   - component: {fileID: 6243222772777903841}
   m_Layer: 3
-  m_Name: BlueMonster
+  m_Name: RedMonster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,8 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5989305184270400754, guid: 2c1a68a0bff23b9428b354ab257557fd,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1dbd7cb31be37c64eb53408c5eb92a98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 6243222772777903775}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eb8254bf4b70f3845899134742a915bd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 92e978ba690ba284bbfddb412ebac660, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -122,18 +121,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.2257309, y: 0.15041351}
+  m_Offset: {x: 0, y: -0.48656845}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 4.5, y: 3.1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.4, y: 6.4}
     newSize: {x: 4.5, y: 3.1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.513443, y: 3.124527}
+  m_Size: {x: 4.5, y: 1.2039413}
   m_EdgeRadius: 0
 --- !u!114 &6243222772777903842
 MonoBehaviour:
@@ -147,16 +146,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ad89bece92e2845a6dfaed18b05d72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 357488017627465481, guid: 652ec2b6db9b37844814f6d741f2c828, type: 3}
-  speed: 0.01
+  player: {fileID: 0}
+  speed: 1
   speedY: 0.01
-  damage: 2
+  damage: 1
   hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}
   moneyCount: {fileID: 11400000, guid: a7bccafcec4deca47b9ceac7d69169fa, type: 2}
   HowMuchMoney: 5
   flying: 0
-  WhichBullet: BlueBullet
-  HP_enemy: 0
+  WhichBullet: RedBullet
+  HP_enemy: 3
 --- !u!50 &6243222772777903841
 Rigidbody2D:
   serializedVersion: 4
