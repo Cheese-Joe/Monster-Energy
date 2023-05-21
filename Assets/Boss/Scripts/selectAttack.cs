@@ -14,6 +14,7 @@ public class selectAttack : MonoBehaviour
     public int newDawnFades;
     public HP_system hp_boss;
     public GameObject selfDestruct;
+    private int randomNumberOFColorChanges;
 
     void Start()
     {
@@ -38,13 +39,20 @@ public class selectAttack : MonoBehaviour
     IEnumerator waitToAttack()
     {
         waitWait = true;
-        yield return new WaitForSeconds(waitForAttack);
+        if (newDawnFades !=0)
+        {
+            yield return new WaitForSeconds(waitForAttack * hp_boss.HP_current / 50 / randomNumberOFColorChanges);
+        }
+        else
+        {
+            yield return new WaitForSeconds(waitForAttack * hp_boss.HP_current / 25);
+        }
         newDawnFades = 0;
         spriteRenderer.sprite = newSprite[newDawnFades];
         randomAttack = Random.Range(0, selectedAttack.Length);
         Instantiate(selectedAttack[randomAttack]);
         Debug.Log("aaa");
-        bossTired = Random.Range(0,3);
+        bossTired = Random.Range(0,2);
         if (bossTired == 1)
         {
             StartCoroutine(bossChill());
@@ -57,9 +65,16 @@ public class selectAttack : MonoBehaviour
     }
     IEnumerator bossChill()
     {
-        yield return new WaitForSeconds(waitForAttack);
+        yield return new WaitForSeconds(waitForAttack * hp_boss.HP_current / 25);
         newDawnFades = Random.Range(0, 4);
         spriteRenderer.sprite = newSprite[newDawnFades];
+        randomNumberOFColorChanges = Random.Range(1, 4);
+        for (int i = 0; i < randomNumberOFColorChanges; i++)
+        {
+            yield return new WaitForSeconds(waitForAttack * hp_boss.HP_current / 50 / randomNumberOFColorChanges);
+            newDawnFades = Random.Range(0, 4);
+            spriteRenderer.sprite = newSprite[newDawnFades];
+        }
         waitWait = false;
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -74,7 +89,7 @@ public class selectAttack : MonoBehaviour
                 }
                 else
                 {
-                    hp_boss.HP_current = hp_boss.HP_current + 5;
+                    hp_boss.HP_current = hp_boss.HP_current + 3;
                 }
             }
             if (collision.transform.tag == "RedBullet")
@@ -85,7 +100,7 @@ public class selectAttack : MonoBehaviour
                 }
                 else
                 {
-                    hp_boss.HP_current = hp_boss.HP_current + 5;
+                    hp_boss.HP_current = hp_boss.HP_current + 3;
                 }
             }
             if (collision.transform.tag == "GreenBullet")
@@ -96,7 +111,7 @@ public class selectAttack : MonoBehaviour
                 }
                 else
                 {
-                    hp_boss.HP_current = hp_boss.HP_current + 5;
+                    hp_boss.HP_current = hp_boss.HP_current + 3;
                 }
             }
         }
