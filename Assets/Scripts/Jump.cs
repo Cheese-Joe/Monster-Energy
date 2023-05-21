@@ -12,6 +12,7 @@ public class Jump : MonoBehaviour
     public LayerMask groundLayer;
     bool isGrounded;
     public Animator animator;
+    int jc = 1;
 
     void Start()
     {
@@ -25,12 +26,24 @@ public class Jump : MonoBehaviour
         bool keyZ = Input.GetKeyDown(KeyCode.Z);
         bool keySpace = Input.GetKeyDown(KeyCode.Space);
 
-            if (keyZ && isGrounded || keySpace && isGrounded)
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        if (keyZ && isGrounded && jc > 0 || keySpace && isGrounded && jc > 0)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            jc = jc - 1;
+        }
 
         if (isGrounded)
+        {
             animator.SetBool("isJumping", false);
+        }
         else
+        {
             animator.SetBool("isJumping", true);
+        }
+
+        if(isGrounded && jc == 0)
+        {
+            jc = 1;
+        }
     }
 }
