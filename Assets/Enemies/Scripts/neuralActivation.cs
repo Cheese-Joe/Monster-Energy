@@ -65,7 +65,7 @@ public class neuralActivation : MonoBehaviour
     {
         if (collision.transform.tag == WhichBullet)
         {
-            HP_enemy = HP_enemy - 1;
+            HP_enemy = HP_enemy - hp.damage;
             if (HP_enemy < 1)
             {
                 moneyCount.Money = moneyCount.Money + HowMuchMoney;

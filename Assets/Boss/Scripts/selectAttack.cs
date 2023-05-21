@@ -15,7 +15,7 @@ public class selectAttack : MonoBehaviour
     public HP_system hp_boss;
     public GameObject selfDestruct;
     private int randomNumberOFColorChanges;
-
+    public HP_system hp;
     void Start()
     {
         hp_boss.HP_current = hp_boss.HP_max;
@@ -41,11 +41,11 @@ public class selectAttack : MonoBehaviour
         waitWait = true;
         if (newDawnFades !=0)
         {
-            yield return new WaitForSeconds(waitForAttack * hp_boss.HP_current / 50 / randomNumberOFColorChanges);
+            yield return new WaitForSeconds(waitForAttack);
         }
         else
         {
-            yield return new WaitForSeconds(waitForAttack * hp_boss.HP_current / 25);
+            yield return new WaitForSeconds(waitForAttack + hp_boss.HP_current / 20);
         }
         newDawnFades = 0;
         spriteRenderer.sprite = newSprite[newDawnFades];
@@ -65,13 +65,13 @@ public class selectAttack : MonoBehaviour
     }
     IEnumerator bossChill()
     {
-        yield return new WaitForSeconds(waitForAttack * hp_boss.HP_current / 25);
+        yield return new WaitForSeconds(waitForAttack + hp_boss.HP_current / 20);
         newDawnFades = Random.Range(0, 4);
         spriteRenderer.sprite = newSprite[newDawnFades];
         randomNumberOFColorChanges = Random.Range(1, 4);
         for (int i = 0; i < randomNumberOFColorChanges; i++)
         {
-            yield return new WaitForSeconds(waitForAttack * hp_boss.HP_current / 50 / randomNumberOFColorChanges);
+            yield return new WaitForSeconds(waitForAttack);
             newDawnFades = Random.Range(0, 4);
             spriteRenderer.sprite = newSprite[newDawnFades];
         }
@@ -85,7 +85,7 @@ public class selectAttack : MonoBehaviour
             {
                 if (newDawnFades == 1)
                 {
-                    hp_boss.HP_current = hp_boss.HP_current - 1;
+                    hp_boss.HP_current = hp_boss.HP_current - hp.damage;
                 }
                 else
                 {
@@ -96,7 +96,7 @@ public class selectAttack : MonoBehaviour
             {
                 if (newDawnFades == 2)
                 {
-                    hp_boss.HP_current = hp_boss.HP_current - 1;
+                    hp_boss.HP_current = hp_boss.HP_current - hp.damage;
                 }
                 else
                 {
@@ -107,7 +107,7 @@ public class selectAttack : MonoBehaviour
             {
                 if (newDawnFades == 3)
                 {
-                    hp_boss.HP_current = hp_boss.HP_current - 1;
+                    hp_boss.HP_current = hp_boss.HP_current - hp.damage;
                 }
                 else
                 {

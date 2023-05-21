@@ -14,6 +14,8 @@ public class Buy : MonoBehaviour
     public MoneyCount moneyCount;
     public HP_system hp;
     public int upgrade;
+    public ShopData shopData;
+    public int maxNumberOfUpgrades;
 
     void Awake()
     {
@@ -36,10 +38,26 @@ public class Buy : MonoBehaviour
         }
         if (WhatToBuy == "hp")
         {
-            if (moneyCount.Money >= cost)
+            if (shopData.HP_upgrade < maxNumberOfUpgrades)
             {
-                moneyCount.Money = moneyCount.Money - cost;
-                hp.HP_current = hp.HP_current + upgrade;
+                if (moneyCount.Money >= cost)
+                {
+                    moneyCount.Money = moneyCount.Money - cost;
+                    hp.HP_max = hp.HP_max + upgrade;
+                    shopData.HP_upgrade = shopData.HP_upgrade + 1;
+                }
+            }
+        }
+        if (WhatToBuy == "Gun")
+        {
+            if (shopData.Gun_upgrade < maxNumberOfUpgrades)
+            {
+                if (moneyCount.Money >= cost)
+                {
+                    moneyCount.Money = moneyCount.Money - cost;
+                    hp.damage = hp.damage + upgrade;
+                    shopData.Gun_upgrade = shopData.Gun_upgrade + 1;
+                }
             }
         }
     }
