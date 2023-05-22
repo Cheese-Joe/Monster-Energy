@@ -18,7 +18,7 @@ public class Camera : MonoBehaviour
     {
         playerPos = new Vector3(player.transform.position.x, 0f, -10f);
             
-        if(player.transform.localScale.x > 0f)
+        if(player.transform.rotation.y > 0f)
         {
             playerPos = new Vector3(player.transform.position.x + offset, 0f, -10f);
         }
