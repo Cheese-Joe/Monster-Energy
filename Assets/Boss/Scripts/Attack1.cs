@@ -5,7 +5,6 @@ using DG.Tweening;
 
 public class Attack1 : MonoBehaviour
 {
-    public AnimationCurve animationCurve;
     public Vector3 originalPosition;
     private float time;
     public float duration;

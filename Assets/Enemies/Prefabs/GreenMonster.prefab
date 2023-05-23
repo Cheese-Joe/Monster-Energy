@@ -30,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 6243222772777903775}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 159.46, y: 79.99, z: 0}
-  m_LocalScale: {x: 0.51387, y: 0.51387, z: 0.51387}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -98,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 6243222772777903775}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 92e978ba690ba284bbfddb412ebac660, type: 2}
+  m_Controller: {fileID: 9100000, guid: e85a5328f188132489d77cbdf2eacf30, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -147,8 +147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 357488017627465481, guid: 652ec2b6db9b37844814f6d741f2c828, type: 3}
-  speed: 0.05
-  speedY: 0.05
+  speed: 0.03
+  speedY: 0.03
   damage: 1
   hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}
   moneyCount: {fileID: 11400000, guid: a7bccafcec4deca47b9ceac7d69169fa, type: 2}
@@ -156,6 +156,7 @@ MonoBehaviour:
   flying: 1
   WhichBullet: GreenBullet
   HP_enemy: 2
+  KillCount: {fileID: 11400000, guid: 04fd229506fc0e642936de1c9a9ff14b, type: 2}
 --- !u!50 &6243222772777903841
 Rigidbody2D:
   serializedVersion: 4

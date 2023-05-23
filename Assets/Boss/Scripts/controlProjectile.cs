@@ -10,6 +10,7 @@ public class controlProjectile : MonoBehaviour
     public bossSpeedChanger boss;
 
 
+
     void Awake()
     {
         transform.DOMoveX(-100f * boss.XPos, 10f).SetRelative(true).SetLoops(-1, LoopType.Incremental);

@@ -7,6 +7,7 @@ public class MedPack : MonoBehaviour
 {
     public int heal;
     public HP_system hp;
+    public killCount KillCount;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class MedPack : MonoBehaviour
                     hp.HP_current = hp.HP_max;
                 }
                 Debug.Log("Player");
+                KillCount.score = KillCount.score + 3;
                 Destroy(this.gameObject);
             }
         }

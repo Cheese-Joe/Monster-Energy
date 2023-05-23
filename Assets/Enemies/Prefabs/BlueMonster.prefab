@@ -157,6 +157,7 @@ MonoBehaviour:
   flying: 0
   WhichBullet: BlueBullet
   HP_enemy: 5
+  KillCount: {fileID: 11400000, guid: 04fd229506fc0e642936de1c9a9ff14b, type: 2}
 --- !u!50 &6243222772777903841
 Rigidbody2D:
   serializedVersion: 4
@@ -177,4 +178,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
