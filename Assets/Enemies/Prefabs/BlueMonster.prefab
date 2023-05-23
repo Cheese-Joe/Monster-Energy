@@ -122,7 +122,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.2257309, y: 0.15041351}
+  m_Offset: {x: -0.10196686, y: 1.5979424}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -133,7 +133,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.513443, y: 3.124527}
+  m_Size: {x: 4.760971, y: 2.9967728}
   m_EdgeRadius: 0
 --- !u!114 &6243222772777903842
 MonoBehaviour:
@@ -156,7 +156,8 @@ MonoBehaviour:
   HowMuchMoney: 5
   flying: 0
   WhichBullet: BlueBullet
-  HP_enemy: 0
+  HP_enemy: 5
+  KillCount: {fileID: 11400000, guid: 04fd229506fc0e642936de1c9a9ff14b, type: 2}
 --- !u!50 &6243222772777903841
 Rigidbody2D:
   serializedVersion: 4
@@ -177,4 +178,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4

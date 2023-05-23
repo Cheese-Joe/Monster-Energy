@@ -19,6 +19,7 @@ public class neuralActivation : MonoBehaviour
     private Rigidbody2D rb2d;
     public string WhichBullet;
     public int HP_enemy;
+    public killCount KillCount;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -70,6 +71,8 @@ public class neuralActivation : MonoBehaviour
             {
                 moneyCount.Money = moneyCount.Money + HowMuchMoney;
                 Debug.Log("Bullet");
+                KillCount.KillCount = KillCount.KillCount + 1;
+                KillCount.score = KillCount.score + 5;
                 Destroy(this.gameObject);
             }
         }
@@ -77,6 +80,7 @@ public class neuralActivation : MonoBehaviour
         {
             hp.HP_current = hp.HP_current - damage;
             Debug.Log("Player");
+            KillCount.KillCount = KillCount.KillCount + 1;
             Destroy(this.gameObject);
         }
     }

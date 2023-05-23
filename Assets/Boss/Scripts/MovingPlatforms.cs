@@ -9,12 +9,13 @@ public class MovingPlatforms : MonoBehaviour
     public Vector3 originalPosition;
     private float time;
     public float duration;
+    public float direction;
 
     // Start is called before the first frame update
     void Start()
     {
         originalPosition = transform.position;
-        transform.DOMoveX(15f, duration).SetRelative(true).SetLoops(-1, LoopType.Yoyo);
+        transform.DOMoveX(direction, duration).SetRelative(true).SetLoops(-1, LoopType.Yoyo);
     }
 
     // Update is called once per frame

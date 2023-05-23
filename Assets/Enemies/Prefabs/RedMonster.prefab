@@ -146,8 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ad89bece92e2845a6dfaed18b05d72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  speed: 1
+  player: {fileID: 357488017627465481, guid: 652ec2b6db9b37844814f6d741f2c828, type: 3}
+  speed: 0.05
   speedY: 0.01
   damage: 1
   hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}
@@ -156,6 +156,7 @@ MonoBehaviour:
   flying: 0
   WhichBullet: RedBullet
   HP_enemy: 3
+  KillCount: {fileID: 11400000, guid: 04fd229506fc0e642936de1c9a9ff14b, type: 2}
 --- !u!50 &6243222772777903841
 Rigidbody2D:
   serializedVersion: 4
@@ -176,4 +177,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4

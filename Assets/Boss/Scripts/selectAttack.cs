@@ -16,6 +16,7 @@ public class selectAttack : MonoBehaviour
     public GameObject selfDestruct;
     private int randomNumberOFColorChanges;
     public HP_system hp;
+    public bossSpeedChanger boss;
     void Start()
     {
         hp_boss.HP_current = hp_boss.HP_max;
@@ -48,6 +49,7 @@ public class selectAttack : MonoBehaviour
             yield return new WaitForSeconds(waitForAttack + hp_boss.HP_current / 20);
         }
         newDawnFades = 0;
+        boss.bossColor = newDawnFades;
         spriteRenderer.sprite = newSprite[newDawnFades];
         randomAttack = Random.Range(0, selectedAttack.Length);
         Instantiate(selectedAttack[randomAttack]);
@@ -67,6 +69,7 @@ public class selectAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(waitForAttack + hp_boss.HP_current / 20);
         newDawnFades = Random.Range(0, 4);
+        boss.bossColor = newDawnFades;
         spriteRenderer.sprite = newSprite[newDawnFades];
         randomNumberOFColorChanges = Random.Range(1, 4);
         for (int i = 0; i < randomNumberOFColorChanges; i++)
