@@ -32,9 +32,8 @@ public class neuralActivation : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
-        Debug.Log(player.transform.position);
         if (Vector3.Distance(transform.position, player.transform.position) > 20f)
         {
             animator.SetBool("NeuralActivation", true);

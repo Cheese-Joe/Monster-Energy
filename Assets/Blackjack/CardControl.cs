@@ -30,7 +30,7 @@ public class CardControl : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if ((second_card == true) && (CC.second_hand == 1))
         {
