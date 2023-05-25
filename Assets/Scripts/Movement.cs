@@ -54,12 +54,12 @@ public class Movement : MonoBehaviour
 
         if (inputX != 0)
         {
-            animator.SetBool("isRunning", true);
+            animator.SetBool("isRuning", true);
             stop = true;
         }
 
         else
-            animator.SetBool("isRunning", false);
+            animator.SetBool("isRuning", false);
 
        
 
