@@ -147,8 +147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6857290477511058745, guid: d4fab15193ad01949aedec959ca2ad9e, type: 3}
-  speed: 0.03
-  speedY: 0.03
+  speed: 0.1
+  speedY: 0.1
   damage: 1
   hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}
   moneyCount: {fileID: 11400000, guid: a7bccafcec4deca47b9ceac7d69169fa, type: 2}

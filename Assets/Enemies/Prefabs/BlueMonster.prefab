@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6857290477511058745, guid: d4fab15193ad01949aedec959ca2ad9e, type: 3}
-  speed: 0.01
+  speed: 0.05
   speedY: 0.01
   damage: 2
   hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}

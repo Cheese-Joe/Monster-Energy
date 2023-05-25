@@ -1769,7 +1769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc53e5f2df1cbf746801c501eaf75f92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1680193110}
   offset: 5
   offsetSmooth: 2
   Walls:
