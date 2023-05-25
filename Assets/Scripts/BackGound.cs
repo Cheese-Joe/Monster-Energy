@@ -16,15 +16,15 @@ public class BackGound : MonoBehaviour
 
     void Update()
     {
-        playerPos = new Vector3(player.transform.position.x, 0f, 10f);
+        playerPos = new Vector3(player.transform.position.x, player.transform.position.y, 10f);
 
         if (player.transform.localScale.x > 0f)
         {
-            playerPos = new Vector3(player.transform.position.x + offset, 0f, 10f);
+            playerPos = new Vector3(player.transform.position.x + offset, player.transform.position.y, 10f);
         }
         else
         {
-            playerPos = new Vector3(player.transform.position.x - offset, 0f, 10f);
+            playerPos = new Vector3(player.transform.position.x - offset, player.transform.position.y, 10f);
         }
 
         transform.position = Vector3.Lerp(transform.position, playerPos, offsetSmooth * Time.deltaTime);
