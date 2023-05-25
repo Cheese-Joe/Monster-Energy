@@ -17,9 +17,13 @@ public class selectAttack : MonoBehaviour
     private int randomNumberOFColorChanges;
     public HP_system hp;
     public bossSpeedChanger boss;
+    private Animator animator;
+
+
     void Start()
     {
         hp_boss.HP_current = hp_boss.HP_max;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -51,6 +55,7 @@ public class selectAttack : MonoBehaviour
         newDawnFades = 0;
         boss.bossColor = newDawnFades;
         spriteRenderer.sprite = newSprite[newDawnFades];
+        animator.SetBool(newDawnFades, true);
         randomAttack = Random.Range(0, selectedAttack.Length);
         Instantiate(selectedAttack[randomAttack]);
         Debug.Log("aaa");
@@ -62,7 +67,6 @@ public class selectAttack : MonoBehaviour
         else
         {
             waitWait = false;
-
         }
     }
     IEnumerator bossChill()
@@ -77,6 +81,7 @@ public class selectAttack : MonoBehaviour
             yield return new WaitForSeconds(waitForAttack);
             newDawnFades = Random.Range(0, 4);
             spriteRenderer.sprite = newSprite[newDawnFades];
+            animator.SetBool(newDawnFades, true);
         }
         waitWait = false;
     }
