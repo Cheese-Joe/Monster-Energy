@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}
-  damage: 1
+  damage: 2
   destroyOnCollision: 0
 --- !u!61 &3288113344061941098
 BoxCollider2D:

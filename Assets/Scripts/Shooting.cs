@@ -12,6 +12,7 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
+
         if(Input.GetKeyDown(KeyCode.Q) && hp.current_gun == 1 || Input.GetKeyDown(KeyCode.C) && hp.current_gun == 1)
         {
             hp.current_gun = 2;

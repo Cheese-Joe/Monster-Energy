@@ -1,53 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7200117170336446577
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7200117170336446576}
-  - component: {fileID: 7200117170336446579}
-  m_Layer: 0
-  m_Name: lcheck
-  m_TagString: RedBullet
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7200117170336446576
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7200117170336446577}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.045, y: -0.05, z: 0}
-  m_LocalScale: {x: 0.5136518, y: 0.5, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7200117170927736650}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &7200117170336446579
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7200117170336446577}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 5, y: 5}
-  m_Direction: 1
 --- !u!1 &7200117170927736649
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,6 +13,7 @@ GameObject:
   - component: {fileID: 7200117170927736648}
   - component: {fileID: 7200117170927736652}
   - component: {fileID: 7200117170927736653}
+  - component: {fileID: 5001411842174084676}
   m_Layer: 0
   m_Name: fireball red
   m_TagString: RedBullet
@@ -79,9 +32,7 @@ Transform:
   m_LocalPosition: {x: -3.73, y: -10.23, z: 10}
   m_LocalScale: {x: 0.9734221, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7200117171071515248}
-  - {fileID: 7200117170336446576}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -151,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 30
-  Check: {fileID: 7200117170336446576}
+  Check: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 72
@@ -193,51 +144,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
---- !u!1 &7200117171071515249
-GameObject:
+--- !u!114 &5001411842174084676
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7200117171071515248}
-  - component: {fileID: 7200117171071515251}
-  m_Layer: 0
-  m_Name: rcheck
-  m_TagString: RedBullet
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7200117171071515248
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7200117171071515249}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.09, y: -0.04, z: 0}
-  m_LocalScale: {x: 0.5136518, y: 0.5, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7200117170927736650}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &7200117171071515251
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7200117171071515249}
+  m_GameObject: {fileID: 7200117170927736649}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 5, y: 5}
-  m_Direction: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73fd1f6887b846b48879af6a383ef8a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}

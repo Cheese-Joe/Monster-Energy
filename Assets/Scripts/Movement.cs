@@ -10,19 +10,29 @@ public class Movement : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
     public float inputX;
-
+    public HP_system hp;
     bool isGrounded;
     bool stop;
     private Animation go;
 
+
+
     void Start()
     {
         animator = GetComponent<Animator>();
+        hp.direction = 1;
     }
 
     void Update()
     {
         inputX = Input.GetAxis("Horizontal");
+        if (inputX < 0)
+        {
+            hp.direction = -1;
+        }
+        else if (inputX > 0)
+            hp.direction = 1;
+
 
         isGrounded = Physics2D.OverlapCapsule(groundCheck.position, new Vector2(0.14f, 0.07f), CapsuleDirection2D.Horizontal, 0, groundLayer);
 
