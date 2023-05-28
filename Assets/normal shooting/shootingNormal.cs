@@ -9,23 +9,32 @@ public class shootingNormal : MonoBehaviour
     public Transform firePos;
     private bool waitWait;
     private float time;
-
+    public TempleData temple;
+    public GameObject rainbow;
 
     void Update()
     {
         if (!waitWait)
         {
-            if (Input.GetAxis("Fire2") == 1)
+            if (Input.GetAxis("Fire2") == 1 || temple.rainbow_bullet)
             {
                 hp.current_gun = hp.current_gun + 1;
                 if (hp.current_gun >= projectiles.Length)
+                {
                     hp.current_gun = 0;
+                }
                 time = 0.5f;
-
             }
             if (Input.GetAxis("Fire1") == 1)
             {
-                Instantiate(projectiles[hp.current_gun], firePos.position, firePos.rotation);
+                if (!temple.rainbow_bullet)
+                {
+                    Instantiate(projectiles[hp.current_gun], firePos.position, firePos.rotation);
+                }
+                else
+                {
+                    Instantiate(rainbow, firePos.position, firePos.rotation);
+                }
                 time = 0.2f;
             }
             StartCoroutine(noSpam());

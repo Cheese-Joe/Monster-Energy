@@ -122,6 +122,11 @@ public class selectAttack : MonoBehaviour
                     hp_boss.HP_current = hp_boss.HP_current + 3;
                 }
             }
+            if (collision.transform.tag == "Fireball")
+            {
+                hp_boss.HP_current = hp_boss.HP_current - hp.damage;
+            }
+
         }
     }
 }

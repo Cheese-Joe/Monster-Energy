@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerDead : MonoBehaviour
 {
     public HP_system hp;
-    // Start is called before the first frame update
+    public SceneAsset scene;
+    public TempleData data;
+
     void Start()
     {
         
@@ -17,8 +21,8 @@ public class PlayerDead : MonoBehaviour
         if (hp.HP_current <0)
         {
             hp.HP_current = hp.HP_max;
-            Debug.Break();
-    
+            if (!data.immortality)
+                SceneManager.LoadScene(scene.name);
         }
 
     }

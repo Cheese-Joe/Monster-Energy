@@ -9,4 +9,9 @@ public class MoneyCount : ScriptableObject
     public int Money;
     public int moneyLeft;
     public int currentBet;
+    public int LVL;
+    public int currentLVL;
+    public bool gameBeaten;
+    public bool shopOpened;
+    public bool templeOpened;
 }

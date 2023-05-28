@@ -11,4 +11,6 @@ public class killCount : ScriptableObject
     public float waitForAttack;
     public int score;
     public int round;
+    public int highScore;
+    public int[] highScoreLVL;
 }
