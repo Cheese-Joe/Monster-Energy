@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 039b25d0760c67f47b0d1830c73351b2, type: 3}
   m_Name: Card Data
   m_EditorClassIdentifier: 
-  numberOfCards: 15
-  ll: 11
-  whohits: 1
-  round: 12
+  numberOfCards: 0
+  ll: 0
+  whohits: 0
+  round: 0
   ending: 0
   double_move: 0
   split_move: 0
-  selected_action: 1
-  second_hand: 3
+  selected_action: 0
+  second_hand: 0
   second_card: 0
   hide_dealer_card: 0
   no_more_cards: 0
   resetll: 0
   ending1: 0
   ending2: 0
-  score: 7
+  score: 0

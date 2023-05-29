@@ -22,7 +22,6 @@ public class yourPos : MonoBehaviour
             counterText.text = text;
             if (Input.GetKeyDown(KeyCode.E))
             {
-                ship.position = pos;
                 SceneManager.LoadScene(scene.name);
             }
         }
@@ -32,6 +31,7 @@ public class yourPos : MonoBehaviour
     {
         if (collision.transform.tag == "Player")
         {
+            ship.position = pos;
             checkCollision = true;
         }
     }

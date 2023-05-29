@@ -5857,7 +5857,7 @@ MonoBehaviour:
   yourButton: {fileID: 1412345207}
   scene:
   - {fileID: 102900000, guid: b9490fdecf142894ea0a4ab7c438f1da, type: 3}
-  - {fileID: 102900000, guid: aba778d9af31c2c4a961b1bd33fd2ae9, type: 3}
+  - {fileID: 102900000, guid: b6c52929f72a6ad4aae7f9cec7fe64e4, type: 3}
   - {fileID: 102900000, guid: dee572514c6e92949bbe18620132779b, type: 3}
   - {fileID: 102900000, guid: 37a4d7ec70da42d488bf14709da0c414, type: 3}
   data: {fileID: 11400000, guid: a7bccafcec4deca47b9ceac7d69169fa, type: 2}
@@ -8340,6 +8340,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005842649421763435, guid: 0f387f920be8b63479571a8786e849e4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 46.799988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005842649421763435, guid: 0f387f920be8b63479571a8786e849e4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -37.899994
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f387f920be8b63479571a8786e849e4, type: 3}

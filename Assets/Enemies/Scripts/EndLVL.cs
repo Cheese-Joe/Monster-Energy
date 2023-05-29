@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class EndLVL : MonoBehaviour
 {
     public GameObject player;
-    public int waitWait;
+    private int waitWait;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
