@@ -13,3 +13,8 @@ MonoBehaviour:
   m_Name: KillCountArena
   m_EditorClassIdentifier: 
   KillCount: 0
+  waitForAttack: 0
+  score: 0
+  round: 0
+  highScore: 0
+  highScoreLVL: 0000000000000000000000000000000000000000

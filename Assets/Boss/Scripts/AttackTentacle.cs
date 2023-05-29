@@ -23,7 +23,7 @@ public class AttackTentacle : MonoBehaviour
         }
         randomiseBetter.RandomiseTentacle = selectTentacle;
         originalPosition = transform.position;
-       tentacles[selectTentacle].transform.DOMoveX(-50f, duration).SetRelative(true).SetLoops(2, LoopType.Yoyo);
+       tentacles[selectTentacle].transform.DOMoveX(50f, duration).SetRelative(true).SetLoops(2, LoopType.Yoyo);
         Destroy(selfdestruct, 20f);
     }
 }

@@ -11,6 +11,7 @@ public class Quit : MonoBehaviour
     public Button yourButton;
     public GameObject buttonStart;
     public cardData CC;
+    public killCount KillCount;
 
 
     void Awake()
@@ -21,7 +22,11 @@ public class Quit : MonoBehaviour
 
     void TaskOnClick()
     {
+        if (KillCount.highScore <= CC.score)
+        {
+            KillCount.highScore = CC.score;
+        }
         CC.score = 0;
-        Debug.Break();
+        SceneManager.LoadScene("Ship");
     }
 }

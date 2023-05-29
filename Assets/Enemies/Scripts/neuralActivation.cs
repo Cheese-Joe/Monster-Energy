@@ -63,7 +63,7 @@ public class neuralActivation : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.tag == WhichBullet)
+        if (collision.transform.tag == WhichBullet || collision.transform.tag == "Fireball")
         {
             HP_enemy = HP_enemy - hp.damage;
             if (HP_enemy < 1)

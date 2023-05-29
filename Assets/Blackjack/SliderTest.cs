@@ -8,7 +8,6 @@ public class SliderTest : MonoBehaviour
 {
     public Slider sliderval;
     public MoneyCount moneyCount;
-    public ButtonsClickarooney startGame;
 
 
     void Start()
