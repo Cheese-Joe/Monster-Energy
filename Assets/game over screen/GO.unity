@@ -503,9 +503,10 @@ MonoBehaviour:
   scene:
   - {fileID: 102900000, guid: b9490fdecf142894ea0a4ab7c438f1da, type: 3}
   - {fileID: 102900000, guid: aba778d9af31c2c4a961b1bd33fd2ae9, type: 3}
-  - {fileID: 0}
+  - {fileID: 102900000, guid: dee572514c6e92949bbe18620132779b, type: 3}
   - {fileID: 102900000, guid: 37a4d7ec70da42d488bf14709da0c414, type: 3}
-  data: {fileID: 0}
+  data: {fileID: 11400000, guid: a7bccafcec4deca47b9ceac7d69169fa, type: 2}
+  goToLVLSelect: 0
 --- !u!1 &1137670933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,10 +1447,10 @@ RectTransform:
   m_Father: {fileID: 992264513}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -82, y: -26}
-  m_SizeDelta: {x: -564, y: -380}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -82, y: -80}
+  m_SizeDelta: {x: 368, y: 144}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1964433736
 MonoBehaviour:

@@ -351,7 +351,6 @@ MonoBehaviour:
   - {fileID: 5393479410914524958, guid: 27bb1902866f82d48903d00357435733, type: 3}
   - {fileID: 5393479410914524958, guid: 885507b0db71e9341978c5e910d53b24, type: 3}
   - {fileID: 7200117170927736649, guid: 18d34c5b2dfdc3c48a65e0a66d1d2834, type: 3}
-  - {fileID: 5745803999698584762, guid: f6e4e1d408f389748abd1f9ec62ecfcc, type: 3}
   hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}
   firePos: {fileID: 1297116228338082304}
   temple: {fileID: 11400000, guid: 2516d9b52c10a7643b5ce1ae8c630b25, type: 2}
@@ -386,7 +385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3001344453049814907
 Transform:
   m_ObjectHideFlags: 0

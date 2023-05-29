@@ -10,6 +10,7 @@ public class getToLVL : MonoBehaviour
     public Button yourButton;
     public SceneAsset[] scene;
     public MoneyCount data;
+    public bool goToLVLSelect;
 
     void Awake()
     {
@@ -19,7 +20,21 @@ public class getToLVL : MonoBehaviour
 
     void TaskOnClick()
     {
-        SceneManager.LoadScene(scene[data.LVL].name);
+        if (!goToLVLSelect)
+        {
+            SceneManager.LoadScene(scene[data.LVL].name);
+        }
+        else
+        {
+            if (!data.gameBeaten)
+            {
+                SceneManager.LoadScene(scene[data.LVL].name);
+            }
+            else
+            {
+                SceneManager.LoadScene("LVLSelect");
+            }
+        }
     }
 
 }
