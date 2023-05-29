@@ -22,13 +22,13 @@ public class getToLVL : MonoBehaviour
     {
         if (!goToLVLSelect)
         {
-            SceneManager.LoadScene(scene[data.LVL].name);
+            SceneManager.LoadScene(scene[data.currentLVL].name);
         }
         else
         {
             if (!data.gameBeaten)
             {
-                SceneManager.LoadScene(scene[data.LVL].name);
+                SceneManager.LoadScene(scene[data.currentLVL].name);
             }
             else
             {

@@ -30,7 +30,8 @@ public class PlayerDead : MonoBehaviour
         }
         else if(Physics2D.OverlapCapsule(dzCheck.position, new Vector2(0.14f, 0.07f), CapsuleDirection2D.Horizontal, 0, dzLayer))
         {
-            Debug.Break();
+            if (!data.immortality)
+                SceneManager.LoadScene(scene.name);
         }
     }
 }

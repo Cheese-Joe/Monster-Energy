@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 652aeb9ce424d2942b054052901c5d46, type: 3}
   m_Name: KillCountArena
   m_EditorClassIdentifier: 
-  KillCount: 0
+  KillCount: 98
   waitForAttack: 0
-  score: 0
+  score: 194
   round: 0
   highScore: 0
-  highScoreLVL: 0000000000000000000000000000000000000000
+  highScoreLVL: 0000000000000000c20000000000000000000000
