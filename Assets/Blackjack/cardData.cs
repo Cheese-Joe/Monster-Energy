@@ -27,6 +27,7 @@ public class cardData : ScriptableObject
     public int ending1;
     public int ending2;
     public int score;
+    public float audioContinue;
 
     public int SumArray(int[,] toBeSummed)
     {

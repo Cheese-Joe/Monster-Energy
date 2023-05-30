@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KillCount: 98
   waitForAttack: 0
-  score: 194
+  score: 0
   round: 0
   highScore: 0
-  highScoreLVL: 0000000000000000c20000000000000000000000
+  highScoreLVL: 0000000000000000000000000000000000000000
