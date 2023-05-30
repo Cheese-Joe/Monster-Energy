@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: HP_boss
   m_EditorClassIdentifier: 
   HP_max: 100
-  HP_current: 100
+  HP_current: 0
+  current_gun: 0
+  damage: 0
+  direction: 0

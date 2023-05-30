@@ -9,6 +9,9 @@ TagManager:
   - BlueBullet
   - GreenBullet
   - RedBullet
+  - Fireball
+  - Canvas
+  - medpack
   layers:
   - Default
   - TransparentFX

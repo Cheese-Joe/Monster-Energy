@@ -20,8 +20,16 @@ public class neuralActivation : MonoBehaviour
     public string WhichBullet;
     public int HP_enemy;
     public killCount KillCount;
+    private Vector3 currentLocation;
+    public GameObject projectile;
+    private AudioSource audioSource;
+    public AudioClip moveSound;
+    public AudioClip hitSound;
+    private bool waitWait;
+
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         _renderer = GetComponent<SpriteRenderer>();
         rb2d = GetComponent<Rigidbody2D>();
@@ -59,28 +67,43 @@ public class neuralActivation : MonoBehaviour
             {
                 transform.Translate(Vector3.down * speedY);
             }
+            if (!waitWait)
+            {
+                StartCoroutine(footsteps());
+            }
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag == WhichBullet || collision.transform.tag == "Fireball")
         {
+            currentLocation = transform.position;
             HP_enemy = HP_enemy - hp.damage;
+            audioSource.PlayOneShot(hitSound, 0.3f);
             if (HP_enemy < 1)
             {
+                Instantiate(projectile, currentLocation, Quaternion.Euler(new Vector3(0, 0, 0)));
                 moneyCount.Money = moneyCount.Money + HowMuchMoney;
                 Debug.Log("Bullet");
                 KillCount.KillCount = KillCount.KillCount + 1;
                 KillCount.score = KillCount.score + 5;
-                Destroy(this.gameObject);
+                Destroy(this.gameObject, 0.1f);
             }
         }
         if (collision.transform.tag == "Player")
         {
+            Instantiate(projectile, currentLocation, Quaternion.Euler(new Vector3(0, 0, 0)));
             hp.HP_current = hp.HP_current - damage;
             Debug.Log("Player");
             KillCount.KillCount = KillCount.KillCount + 1;
-            Destroy(this.gameObject);
+            Destroy(this.gameObject, 0.1f);
         }
+    }
+    IEnumerator footsteps()
+    {
+        waitWait = true;
+        audioSource.PlayOneShot(moveSound, 0.3f);
+        yield return new WaitForSeconds(1f);
+        waitWait = false;
     }
 }

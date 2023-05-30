@@ -16,10 +16,13 @@ public class CardControl : MonoBehaviour
     public bool second_card;
     public bool hide_dealer_card;
     public float RotationSpeed = 50f;
+    private AudioSource audioSource;
+    public AudioClip clip;
 
 
     void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         hide_dealer_card = CC.hide_dealer_card;
         CC.hide_dealer_card = false;
         second_card = CC.second_card;
@@ -124,6 +127,7 @@ public class CardControl : MonoBehaviour
     }
     IEnumerator RotateCard()
     {
+        audioSource.PlayOneShot(clip, 0.3f);
         float goofy = 1;
         for (int x = 1; x <= coroutinewait * 0.25f; x++)
         {

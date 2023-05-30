@@ -22,7 +22,7 @@ public class Quit : MonoBehaviour
 
     void TaskOnClick()
     {
-        if (KillCount.highScore <= CC.score)
+        if (KillCount.highScore < CC.score)
         {
             KillCount.highScore = CC.score;
         }

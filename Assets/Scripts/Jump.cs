@@ -12,6 +12,8 @@ public class Jump : MonoBehaviour
     public LayerMask groundLayer;
     bool isGrounded;
     public Animator animator;
+    public AudioSource audioSource;
+    public AudioClip clip;
 
     void Start()
     {
@@ -26,7 +28,10 @@ public class Jump : MonoBehaviour
         bool keySpace = Input.GetKeyDown(KeyCode.Space);
 
             if (keyZ && isGrounded || keySpace && isGrounded)
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            audioSource.PlayOneShot(clip, 0.3f);
+        }
 
         if (isGrounded)
             animator.SetBool("isJumping", false);

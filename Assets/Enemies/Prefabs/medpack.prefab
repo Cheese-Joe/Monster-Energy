@@ -97,6 +97,8 @@ MonoBehaviour:
   heal: 1
   hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}
   KillCount: {fileID: 11400000, guid: 04fd229506fc0e642936de1c9a9ff14b, type: 2}
+  soundSpawn: {fileID: 175212377350184874, guid: ab265aac515888949b91bce57dcdb82a,
+    type: 3}
 --- !u!1 &4413927671747510923
 GameObject:
   m_ObjectHideFlags: 0

@@ -149,9 +149,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 1805572022078304659, guid: 02836832e822129459a4e2d0909ab82e,
     type: 3}
+  explosion: {fileID: 1121192042590650, guid: 5a01847d5ab11a141be2b5cbf18988e2, type: 3}
   randomSpawn: 1
   selfDestruction: {fileID: 6551177018289034928}
-  hp: {fileID: 0}
+  hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}
   boss: {fileID: 11400000, guid: 62baff5dff1d38f47a76d92a6258223d, type: 2}
 --- !u!114 &880575847261747260
 MonoBehaviour:
@@ -168,3 +169,5 @@ MonoBehaviour:
   hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}
   damage: 2
   destroyOnCollision: 1
+  soundSpawn: {fileID: 175212377350184874, guid: f0bf5c58283e0a0479b7db64ba1cc59b,
+    type: 3}

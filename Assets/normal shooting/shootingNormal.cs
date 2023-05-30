@@ -11,6 +11,9 @@ public class shootingNormal : MonoBehaviour
     private float time;
     public TempleData temple;
     public GameObject rainbow;
+    public AudioSource audioSource;
+    public AudioClip[] clip;
+
 
     void Update()
     {
@@ -29,11 +32,13 @@ public class shootingNormal : MonoBehaviour
             {
                 if (!temple.rainbow_bullet)
                 {
+                    audioSource.PlayOneShot(clip[hp.current_gun], 0.3f);
                     Instantiate(projectiles[hp.current_gun], firePos.position, firePos.rotation);
                 }
                 else
                 {
                     Instantiate(rainbow, firePos.position, firePos.rotation);
+                    audioSource.PlayOneShot(clip[3], 0.3f);
                 }
                 time = 0.2f;
             }
