@@ -7,6 +7,7 @@ public class Reloading : MonoBehaviour
 {
     private Animator anim;
     public float ammo = 30;
+  
 
 
 
@@ -14,6 +15,7 @@ public class Reloading : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        
 
 
     }
@@ -39,10 +41,22 @@ public class Reloading : MonoBehaviour
             {
                 if (ammo > 0)
                 {
-                    anim.SetTrigger("ShootBlue");
+                    anim.SetTrigger("Shoot");
                     ammo--;
+                    this.GetComponent<shootingNormal>().enabled = true;
                 }
+
+                if (ammo <= 0)
+                {
+                    this.GetComponent<shootingNormal>().enabled = false;
+
+                    
+                }
+
+                
             }
+
+            
         }
 
 
