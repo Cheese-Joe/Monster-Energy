@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  audioSource: {fileID: 3324033430591838604}
   synth: {fileID: 8300000, guid: 37591b0ba125bcc439020736bff0dae4, type: 3}
 --- !u!82 &3324033430591838604
 AudioSource:

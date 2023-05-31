@@ -9,7 +9,7 @@ public class EndLVL : MonoBehaviour
 {
     public GameObject player;
     private int waitWait;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     public AudioClip synth;
 
     private void OnCollisionEnter2D(Collision2D collision)
