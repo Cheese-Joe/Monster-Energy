@@ -35,11 +35,11 @@ public class Reloading : MonoBehaviour
 
             }
 
-            if (Input.GetKeyDown(KeyCode.X))
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 if (ammo > 0)
                 {
-                    anim.SetTrigger("Shoot");
+                    anim.SetTrigger("ShootBlue");
                     ammo--;
                 }
             }
