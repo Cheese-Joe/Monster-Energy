@@ -8,6 +8,11 @@ public class MedPack : MonoBehaviour
     public int heal;
     public HP_system hp;
     public killCount KillCount;
+    public GameObject soundSpawn;
+    private Vector3 currentLocation;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +31,8 @@ public class MedPack : MonoBehaviour
                 }
                 Debug.Log("Player");
                 KillCount.score = KillCount.score + 3;
+                currentLocation = transform.position;
+                Instantiate(soundSpawn, currentLocation, Quaternion.Euler(new Vector3(0, 0, 0)));
                 Destroy(this.gameObject);
             }
         }

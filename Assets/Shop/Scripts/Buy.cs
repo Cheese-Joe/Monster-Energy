@@ -16,9 +16,13 @@ public class Buy : MonoBehaviour
     public int upgrade;
     public ShopData shopData;
     public int maxNumberOfUpgrades;
+    private AudioSource audioSource;
+    public AudioClip buy;
+    public AudioClip cantBuy;
 
     void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         Button btn = yourButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
     }
@@ -26,12 +30,14 @@ public class Buy : MonoBehaviour
     {
         if (moneyCount.Money < cost)
         {
+            audioSource.PlayOneShot(cantBuy, 1);
             nomoney.SetActive(true);
         }
         if (WhatToBuy == "medpack")
         {
             if (moneyCount.Money >= cost)
             {
+                audioSource.PlayOneShot(buy, 1);
                 moneyCount.Money = moneyCount.Money - cost;
                 hp.HP_current = hp.HP_current + upgrade;
             }
@@ -42,6 +48,7 @@ public class Buy : MonoBehaviour
             {
                 if (moneyCount.Money >= cost)
                 {
+                    audioSource.PlayOneShot(buy, 1);
                     moneyCount.Money = moneyCount.Money - cost;
                     hp.HP_max = hp.HP_max + upgrade;
                     shopData.HP_upgrade = shopData.HP_upgrade + 1;
@@ -54,6 +61,7 @@ public class Buy : MonoBehaviour
             {
                 if (moneyCount.Money >= cost)
                 {
+                    audioSource.PlayOneShot(buy, 1);
                     moneyCount.Money = moneyCount.Money - cost;
                     hp.damage = hp.damage + upgrade;
                     shopData.Gun_upgrade = shopData.Gun_upgrade + 1;

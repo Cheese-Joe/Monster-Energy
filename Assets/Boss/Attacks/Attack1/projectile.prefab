@@ -116,6 +116,8 @@ MonoBehaviour:
   hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}
   damage: 1
   destroyOnCollision: 1
+  soundSpawn: {fileID: 175212377350184874, guid: f0bf5c58283e0a0479b7db64ba1cc59b,
+    type: 3}
 --- !u!61 &3610380863468991541
 BoxCollider2D:
   m_ObjectHideFlags: 0

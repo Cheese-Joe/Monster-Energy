@@ -14,11 +14,13 @@ public class Movement : MonoBehaviour
     bool isGrounded;
     bool stop;
     private Animation go;
-
-
+    private bool waitWait;
+    private AudioSource audioSource;
+    public AudioClip footstepSound;
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         hp.direction = 1;
     }
@@ -52,18 +54,30 @@ public class Movement : MonoBehaviour
             gameObject.transform.localScale = new Vector3(-1, 1, 0);
         }
 
+        if (((inputX == 1) || (inputX == -1)) && isGrounded)
+        {
+            if (!waitWait)
+                StartCoroutine(footsteps());
+        }
+
         if (inputX != 0)
         {
             animator.SetBool("isRuning", true);
             stop = true;
         }
-
         else
             animator.SetBool("isRuning", false);
 
        
 
       
+    }
+    IEnumerator footsteps()
+    {
+        waitWait = true;
+        audioSource.PlayOneShot(footstepSound, 0.1f);
+        yield return new WaitForSeconds(0.1f);
+        waitWait = false;
     }
 
 }

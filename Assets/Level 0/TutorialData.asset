@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4146e55783a647c4a99aa5a45789e9a8, type: 3}
+  m_Name: TutorialData
+  m_EditorClassIdentifier: 
+  movementTutorial:
+  - 'You there? '
+  - I promise, this planet won't be as hard as the last one.
+  - 'By the way, I fixed your suit. Didn''t do anything funny with it. '
+  - 'A and D to move, Space to jump.  '
+  - 'See whether you can find any mindless beasts to exterminate. '
+  - Over.
+  shootingTutorial:
+  - 'Ugh, what''s that? '
+  - 'Smells like cheap cigarettes. '
+  - 'Oh THIS one. '
+  - 'Oh THIS one. '
+  - 'You know, the type of guy who likes tall ugly buildings and listens to sad music. '
+  - Sounds like unintelligent life form to me.
+  - 'Crush his sorrow arse. '
+  - 'Use your mouse to shoot. '
+  - 'Alternatively, you can press CTRL.   '
+  - Over.
+  goalTutorial:
+  - 'Nice! '
+  - 'One less nihilist. '
+  - 'You might encounter other monsters and I''m afraid your gun won''t damage them. '
+  - 'Luckily for you, I attuned your gun to shoot multicoloured bullets. '
+  - 'Just press right mouse button (or ALT) to change your current colour. '
+  - 'There is an indicator in top left corner. '
+  - 'Use the same colour as your enemies to deal them damage. '
+  - 'Shooting different colour won''t do any harm to them, so don''t waste your time. '
+  - Make your way to the ship.
+  - 'I''ll be waiting you there. '
+  - 'ALSO, look out for the treasure chests. '
+  - Over and out.
+  toShooting: 1
+  toGoal: 0
+  movementDone: 1
+  shootingDone: 0
+  goalDone: 0
