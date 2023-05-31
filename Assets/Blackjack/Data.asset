@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eccef27729115e24dada9fffbe27fe89, type: 3}
   m_Name: Data
   m_EditorClassIdentifier: 
-  Money: 1415
-  moneyLeft: 1158
-  currentBet: 32
+  Money: 1695
+  moneyLeft: 1645
+  currentBet: 0
   LVL: 0
   currentLVL: 2
   gameBeaten: 0
   shopOpened: 1
-  templeOpened: 0
+  templeOpened: 1
+  chestOpened: 000001

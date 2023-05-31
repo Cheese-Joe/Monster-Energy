@@ -722,6 +722,7 @@ GameObject:
   - component: {fileID: 557698971}
   - component: {fileID: 557698972}
   - component: {fileID: 557698973}
+  - component: {fileID: 557698974}
   m_Layer: 3
   m_Name: heart
   m_TagString: Untagged
@@ -1146,6 +1147,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &557698974
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557698965}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &638019528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1387,6 +1408,7 @@ GameObject:
   - component: {fileID: 1002656687}
   - component: {fileID: 1002656686}
   - component: {fileID: 1002656688}
+  - component: {fileID: 1002656689}
   m_Layer: 0
   m_Name: balls1
   m_TagString: Untagged
@@ -1487,6 +1509,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 25.6, y: 6.700092}
   m_EdgeRadius: 0
+--- !u!95 &1002656689
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002656685}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6a911f87bdd5ca64e9199d7bd2c3f1fa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1054422153
 GameObject:
   m_ObjectHideFlags: 0

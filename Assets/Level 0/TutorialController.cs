@@ -60,7 +60,7 @@ public class TutorialController : MonoBehaviour
                 data.movementDone = true;
                 spaceGirl.transform.DOMoveX(-40f, 1f).SetRelative(true).SetLoops(2, LoopType.Incremental);
             }
-            if (textCounter < data.shootingTutorial.Length && !data.shootingDone && data.toShooting)
+            if (textCounter <= data.shootingTutorial.Length && !data.shootingDone && data.toShooting)
             {
                 if (textCounter < data.shootingTutorial.Length)
                     text.text = data.shootingTutorial[textCounter];
@@ -72,16 +72,16 @@ public class TutorialController : MonoBehaviour
                     StartCoroutine(cameraJokes());
                 }
             }
-            if (textCounter == data.shootingTutorial.Length && !data.shootingDone && data.toShooting)
+            if (textCounter > data.shootingTutorial.Length && !data.shootingDone && data.toShooting)
             {
                 player.GetComponent<shootingNormal>().enabled = true;
                 player.GetComponent<Movement>().enabled = true;
-                cameraA.GetComponent<Camera>().enabled = true;
+                cameraA.GetComponent<Camera2s>().enabled = true;
                 data.shootingDone = true;
                 textCounter = 0;
                 spaceGirl.transform.DOMoveX(-40f, 1f).SetRelative(true).SetLoops(2, LoopType.Incremental);
             }
-            if (textCounter < data.goalTutorial.Length && !data.goalDone && data.toGoal)
+            if (textCounter <= data.goalTutorial.Length && !data.goalDone && data.toGoal)
             {
                 if (textCounter < data.goalTutorial.Length)
                     text.text = data.goalTutorial[textCounter];
@@ -90,7 +90,7 @@ public class TutorialController : MonoBehaviour
                 textCounter++;
 
             }
-            if (textCounter == data.goalTutorial.Length && !data.goalDone && data.toGoal)
+            if (textCounter > data.goalTutorial.Length && !data.goalDone && data.toGoal)
             {
                 player.GetComponent<shootingNormal>().enabled = true;
                 player.GetComponent<Movement>().enabled = true;
@@ -120,11 +120,12 @@ public class TutorialController : MonoBehaviour
     IEnumerator cameraJokes()
     {
         data.toShooting = false;
-        cameraA.GetComponent<Camera>().enabled = false;
+        cameraA.GetComponent<Camera2s>().enabled = false;
         textCounter = 3;
         cameraA.transform.DOMoveX(15f, 4f).SetRelative(true).SetLoops(1, LoopType.Incremental);
         yield return new WaitForSeconds(4f);
         text.text = data.shootingTutorial[textCounter];
+        textCounter = 4;
         data.toShooting = true;
     }
 }

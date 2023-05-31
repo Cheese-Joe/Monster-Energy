@@ -25,7 +25,7 @@ public class chestController : MonoBehaviour
             audioSource.PlayOneShot(coinClick, 0.5f);
             money.Money = money.Money + howMuchMoney;
             money.chestOpened[money.currentLVL] = true;
-            Destroy(gameObject);
+            Destroy(gameObject, 1f);
         }
     }
 }
