@@ -17,6 +17,14 @@ public class returnToTheShip : MonoBehaviour
     {
         Button btn = yourButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
+        if (moneyCount.currentLVL == 1)
+        {
+            moneyCount.shopOpened = true;
+        }
+        if (moneyCount.currentLVL == 2)
+        {
+            moneyCount.templeOpened = true;
+        }
     }
     void TaskOnClick()
     {
