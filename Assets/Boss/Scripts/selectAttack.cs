@@ -59,7 +59,6 @@ public class selectAttack : MonoBehaviour
         if (newDawnFades !=0)
         {
             yield return new WaitForSeconds(waitForAttack);
-            animator.SetBool(newDawnFades.ToString(), false);
         }
         else
         {
