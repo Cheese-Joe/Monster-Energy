@@ -59,6 +59,7 @@ public class selectAttack : MonoBehaviour
         if (newDawnFades !=0)
         {
             yield return new WaitForSeconds(waitForAttack);
+            animator.SetBool(newDawnFades.ToString(), false);
         }
         else
         {
@@ -93,7 +94,7 @@ public class selectAttack : MonoBehaviour
             yield return new WaitForSeconds(waitForAttack);
             newDawnFades = Random.Range(0, 4);
             spriteRenderer.sprite = newSprite[newDawnFades];
-            animator.SetBool(newDawnFades, true);
+            animator.SetBool(newDawnFades.ToString(), true);
         }
         waitWait = false;
     }
