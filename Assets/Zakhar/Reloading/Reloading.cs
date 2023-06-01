@@ -8,8 +8,8 @@ public class Reloading : MonoBehaviour
     private Animator anim;
     private bool waitWait;
     public HP_system hp;
-
-
+    public AudioClip[] audio;
+    public AudioSource audioSource;
 
     void Start()
     {
@@ -25,7 +25,7 @@ public class Reloading : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
-
+                audioSource.PlayOneShot(audio[0], 0.5f);
                 anim.SetTrigger("Reload");
             }
 
@@ -45,8 +45,9 @@ public class Reloading : MonoBehaviour
                 if (hp.ammo <= 0)
                 {
                     this.GetComponent<shootingNormal>().enabled = false;
+                    audioSource.PlayOneShot(audio[1], 0.5f);
 
-                    
+
                 }
                 StartCoroutine(reloads());
                 

@@ -229,6 +229,7 @@ GameObject:
   - component: {fileID: 58163644}
   - component: {fileID: 58163643}
   - component: {fileID: 58163646}
+  - component: {fileID: 58163647}
   m_Layer: 3
   m_Name: Square
   m_TagString: Floor
@@ -350,6 +351,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 22.06186, y: 2.318669}
   m_EdgeRadius: 0
+--- !u!114 &58163647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58163642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 851546fcd139b3042b2d8b5e2d504b24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whichLvlIsIt: 2
+  moneyCount: {fileID: 11400000, guid: a7bccafcec4deca47b9ceac7d69169fa, type: 2}
+  kill: {fileID: 11400000, guid: 04fd229506fc0e642936de1c9a9ff14b, type: 2}
 --- !u!1001 &59196238
 PrefabInstance:
   m_ObjectHideFlags: 0

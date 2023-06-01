@@ -171,3 +171,4 @@ MonoBehaviour:
   destroyOnCollision: 1
   soundSpawn: {fileID: 175212377350184874, guid: f0bf5c58283e0a0479b7db64ba1cc59b,
     type: 3}
+  temple: {fileID: 11400000, guid: 2516d9b52c10a7643b5ce1ae8c630b25, type: 2}

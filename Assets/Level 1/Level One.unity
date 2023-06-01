@@ -419,6 +419,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5769624266734593692, guid: 8303e5de75420964da56e99a9b14421c,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 993165114}
+    - target: {fileID: 5769624266734593692, guid: 8303e5de75420964da56e99a9b14421c,
+        type: 3}
       propertyPath: checkpointPos.x
       value: 34
       objectReference: {fileID: 0}
@@ -1789,6 +1794,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5769624266734593692, guid: 8303e5de75420964da56e99a9b14421c,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 993165114}
+    - target: {fileID: 5769624266734593692, guid: 8303e5de75420964da56e99a9b14421c,
+        type: 3}
       propertyPath: checkpointPos.x
       value: 71
       objectReference: {fileID: 0}
@@ -2271,6 +2281,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5769624266734593692, guid: 8303e5de75420964da56e99a9b14421c,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 993165114}
     - target: {fileID: 5769624266734593692, guid: 8303e5de75420964da56e99a9b14421c,
         type: 3}
       propertyPath: checkpointPos.x
@@ -6618,6 +6633,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5769624266734593692, guid: 8303e5de75420964da56e99a9b14421c,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 993165114}
+    - target: {fileID: 5769624266734593692, guid: 8303e5de75420964da56e99a9b14421c,
+        type: 3}
       propertyPath: checkpointPos.x
       value: 71
       objectReference: {fileID: 0}
@@ -7872,6 +7892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichLvlIsIt: 1
   moneyCount: {fileID: 11400000, guid: a7bccafcec4deca47b9ceac7d69169fa, type: 2}
+  kill: {fileID: 11400000, guid: 04fd229506fc0e642936de1c9a9ff14b, type: 2}
 --- !u!1 &1831923433
 GameObject:
   m_ObjectHideFlags: 0

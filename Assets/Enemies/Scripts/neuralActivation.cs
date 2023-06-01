@@ -26,7 +26,7 @@ public class neuralActivation : MonoBehaviour
     public AudioClip moveSound;
     public AudioClip hitSound;
     private bool waitWait;
-
+    public TempleData temple;
 
 
     void Start()
@@ -38,6 +38,10 @@ public class neuralActivation : MonoBehaviour
         if (flying == true)
         {
             rb2d.gravityScale = 0f;
+        }
+        if (temple.tomfoolery == 6)
+        {
+            damage = 9999;
         }
     }
 
@@ -89,7 +93,7 @@ public class neuralActivation : MonoBehaviour
                 Debug.Log("Bullet");
                 KillCount.KillCount = KillCount.KillCount + 1;
                 KillCount.score = KillCount.score + 5;
-                Destroy(this.gameObject, 0.1f);
+                Destroy(this.gameObject);
             }
         }
         if (collision.transform.tag == "Player")
@@ -98,7 +102,7 @@ public class neuralActivation : MonoBehaviour
             hp.HP_current = hp.HP_current - damage;
             Debug.Log("Player");
             KillCount.KillCount = KillCount.KillCount + 1;
-            Destroy(this.gameObject, 0.1f);
+            Destroy(this.gameObject);
         }
     }
     IEnumerator footsteps()

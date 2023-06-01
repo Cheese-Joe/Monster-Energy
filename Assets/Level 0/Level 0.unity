@@ -356,6 +356,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1445508743473619017, guid: 0f387f920be8b63479571a8786e849e4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3141049980880782479, guid: 0f387f920be8b63479571a8786e849e4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377683360337725170, guid: 0f387f920be8b63479571a8786e849e4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -52.100006
+      objectReference: {fileID: 0}
     - target: {fileID: 3648820042670154517, guid: 0f387f920be8b63479571a8786e849e4,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -520,6 +535,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -37.899994
+      objectReference: {fileID: 0}
+    - target: {fileID: 7494232194214166471, guid: 0f387f920be8b63479571a8786e849e4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8920842992167251109, guid: 0f387f920be8b63479571a8786e849e4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f387f920be8b63479571a8786e849e4, type: 3}
@@ -4549,6 +4574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichLvlIsIt: 0
   moneyCount: {fileID: 11400000, guid: a7bccafcec4deca47b9ceac7d69169fa, type: 2}
+  kill: {fileID: 11400000, guid: 04fd229506fc0e642936de1c9a9ff14b, type: 2}
 --- !u!1001 &1220528401
 PrefabInstance:
   m_ObjectHideFlags: 0
