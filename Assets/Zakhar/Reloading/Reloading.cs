@@ -7,7 +7,7 @@ public class Reloading : MonoBehaviour
 {
     private Animator anim;
     public float ammo = 30;
-  
+    private bool waitWait;
 
 
 
@@ -31,18 +31,15 @@ public class Reloading : MonoBehaviour
             {
 
                 anim.SetTrigger("Reload");
-                
-
-
-
             }
 
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if ((Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Mouse0)) && !waitWait)
             {
                 if (ammo > 0)
                 {
                     anim.SetTrigger("Shoot");
                     ammo--;
+
                     this.GetComponent<shootingNormal>().enabled = true;
                 }
 
@@ -52,7 +49,7 @@ public class Reloading : MonoBehaviour
 
                     
                 }
-
+                StartCoroutine(reloads());
                 
             }
 
@@ -65,6 +62,12 @@ public class Reloading : MonoBehaviour
     public void ReloadingEvent()
     {
         ammo = 30;
+    }
+    IEnumerator reloads()
+    {
+        waitWait = true;
+        yield return new WaitForSeconds(0.4f);
+        waitWait = false;
     }
 }
     

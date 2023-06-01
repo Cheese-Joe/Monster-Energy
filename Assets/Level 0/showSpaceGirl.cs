@@ -16,7 +16,7 @@ public class showSpaceGirl : MonoBehaviour
         if (data.toGoal && !wait)
         {
             wait = true;
-            spaceGirl.transform.DOMoveX(40, 1f).SetRelative(true).SetLoops(2, LoopType.Incremental);
+            spaceGirl.transform.DOMoveX(40f, 1f).SetRelative(true).SetLoops(2, LoopType.Incremental);
         }
         if (data.toShooting && !waitWait)
         {

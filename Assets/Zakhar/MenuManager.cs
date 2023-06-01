@@ -8,12 +8,7 @@ public class MenuManager : MonoBehaviour
     public MoneyCount data;
    public void PLayGame()
     {
-        if (data.currentLVL == 0 && !data.gameBeaten)
-        {
-            SceneManager.LoadScene("Level 0");
-        }
-        else
-            SceneManager.LoadScene("Ship");
+        SceneManager.LoadScene("Level 0");
     }
 
     public void PlayBlackjack()
@@ -25,5 +20,10 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("quit");
         Application.Quit();
+    }
+    public void PLayGameShip()
+    {
+        SceneManager.LoadScene("Ship");
+
     }
 }
