@@ -6,18 +6,14 @@ using UnityEngine;
 public class Reloading : MonoBehaviour
 {
     private Animator anim;
-    public float ammo = 30;
     private bool waitWait;
-
+    public HP_system hp;
 
 
 
     void Start()
     {
         anim = GetComponent<Animator>();
-        
-
-
     }
 
 
@@ -35,15 +31,15 @@ public class Reloading : MonoBehaviour
 
             if ((Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Mouse0)) && !waitWait)
             {
-                if (ammo > 0)
+                if (hp.ammo > 0)
                 {
                     anim.SetTrigger("Shoot");
-                    ammo--;
+                    hp.ammo--;
 
                     this.GetComponent<shootingNormal>().enabled = true;
                 }
 
-                if (ammo <= 0)
+                if (hp.ammo <= 0)
                 {
                     this.GetComponent<shootingNormal>().enabled = false;
 
@@ -61,12 +57,12 @@ public class Reloading : MonoBehaviour
 
     public void ReloadingEvent()
     {
-        ammo = 30;
+        hp.ammo = hp.ammoMax;
     }
     IEnumerator reloads()
     {
         waitWait = true;
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.1f);
         waitWait = false;
     }
 }

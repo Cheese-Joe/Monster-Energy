@@ -11,4 +11,6 @@ public class HP_system : ScriptableObject
     public int current_gun;
     public int damage;
     public float direction;
+    public int ammo;
+    public int ammoMax;
 }

@@ -15,7 +15,8 @@ public class TutorialController : MonoBehaviour
     public GameObject spaceGirl;
     public MoneyCount money;
 
-    // Start is called before the first frame update
+
+
     void Start()
     {
         player.GetComponent<shootingNormal>().enabled = false;
@@ -25,6 +26,8 @@ public class TutorialController : MonoBehaviour
         data.movementDone = false;
         data.shootingDone = false;
         data.goalDone = false;
+        spaceGirl.transform.DOMoveX(40f, 1f).SetRelative(true).SetLoops(1, LoopType.Incremental);
+
     }
 
     // Update is called once per frame
