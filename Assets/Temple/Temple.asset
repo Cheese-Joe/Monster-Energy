@@ -15,4 +15,4 @@ MonoBehaviour:
   donation: 0
   rainbow_bullet: 0
   halo: 0
-  immortality: 0
+  immortality: 1

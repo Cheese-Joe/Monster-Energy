@@ -29,12 +29,15 @@ public class Reloading : MonoBehaviour
                 anim.SetTrigger("Reload");
             }
 
-            if ((Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Mouse0)) && !waitWait)
+            if ((Input.GetAxis("Fire2") == 1 || Input.GetAxis("Fire1") == 1) && !waitWait)
             {
                 if (hp.ammo > 0)
                 {
-                    anim.SetTrigger("Shoot");
-                    hp.ammo--;
+                    if (Input.GetAxis("Fire1") == 1)
+                    {
+                        anim.SetTrigger("Shoot");
+                        hp.ammo--;
+                    }
 
                     this.GetComponent<shootingNormal>().enabled = true;
                 }
