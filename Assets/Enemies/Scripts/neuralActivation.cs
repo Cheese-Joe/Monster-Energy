@@ -27,6 +27,8 @@ public class neuralActivation : MonoBehaviour
     public AudioClip hitSound;
     private bool waitWait;
 
+
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();

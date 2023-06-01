@@ -43,8 +43,8 @@ MonoBehaviour:
   - 'I''ll be waiting you there. '
   - 'ALSO, look out for the treasure chests. '
   - Over and out.
-  toShooting: 1
+  toShooting: 0
   toGoal: 0
-  movementDone: 1
+  movementDone: 0
   shootingDone: 0
   goalDone: 0

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4da22f41ebebc0419bda0005608f4b5, type: 3}
   m_Name: ShipData
   m_EditorClassIdentifier: 
-  position: {x: -3, y: 11, z: -3}
+  position: {x: -13, y: 12, z: -3}
