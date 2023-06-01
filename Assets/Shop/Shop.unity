@@ -2925,7 +2925,7 @@ MonoBehaviour:
   hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}
   upgrade: 1
   shopData: {fileID: 11400000, guid: cd35ee73a222003479ee11123a2b428c, type: 2}
-  maxNumberOfUpgrades: 0
+  maxNumberOfUpgrades: 4
   buy: {fileID: 8300000, guid: 974890956298a1f428cd91aab594904a, type: 3}
   cantBuy: {fileID: 8300000, guid: 518907564757ebe44a3bb167ab82ebaa, type: 3}
 --- !u!82 &1848974710
@@ -3080,13 +3080,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yourButton: {fileID: 1896202848}
   nomoney: {fileID: 1612784556}
-  WhatToBuy: hp
+  WhatToBuy: Gun
   cost: 200
   moneyCount: {fileID: 11400000, guid: a7bccafcec4deca47b9ceac7d69169fa, type: 2}
   hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}
   upgrade: 1
   shopData: {fileID: 11400000, guid: cd35ee73a222003479ee11123a2b428c, type: 2}
-  maxNumberOfUpgrades: 0
+  maxNumberOfUpgrades: 2
   buy: {fileID: 8300000, guid: 974890956298a1f428cd91aab594904a, type: 3}
   cantBuy: {fileID: 8300000, guid: 518907564757ebe44a3bb167ab82ebaa, type: 3}
 --- !u!114 &1896202848

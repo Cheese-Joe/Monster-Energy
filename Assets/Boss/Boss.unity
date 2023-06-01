@@ -423,7 +423,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5751c532170323f4f93d0a0f59a62653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammo: 30
+  hp: {fileID: 0}
+  audio: []
+  audioSource: {fileID: 0}
 --- !u!1 &406303359 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6106868601878589113, guid: 834d1087911241c4bb2f2bf29da0cc28,
@@ -846,6 +848,7 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: 2be86b80327f60742a373142b7407bc0, type: 3}
   healSound: {fileID: 8300000, guid: 810bf4b6d8cab4b429a06e2ca7d20310, type: 3}
   death: {fileID: 4215141807160524032, guid: 7d9164442ec91af408bcb6baff107a52, type: 3}
+  money: {fileID: 11400000, guid: a7bccafcec4deca47b9ceac7d69169fa, type: 2}
 --- !u!61 &557698969
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1430,6 +1433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichLvlIsIt: 3
   moneyCount: {fileID: 11400000, guid: a7bccafcec4deca47b9ceac7d69169fa, type: 2}
+  kill: {fileID: 11400000, guid: 04fd229506fc0e642936de1c9a9ff14b, type: 2}
 --- !u!1 &1002656685
 GameObject:
   m_ObjectHideFlags: 0

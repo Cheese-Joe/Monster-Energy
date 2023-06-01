@@ -752,7 +752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: {fileID: 11400000, guid: a7bccafcec4deca47b9ceac7d69169fa, type: 2}
-  howMuchMoney: 50
+  howMuchMoney: 150
   audioSource: {fileID: 9151238534475688125}
   coinClick: {fileID: 8300000, guid: 9caa9080b668f654ea2c56b292a2dd09, type: 3}
   canvas: {fileID: 4839894234266270177}
