@@ -11,7 +11,7 @@ public class showSpaceGirl : MonoBehaviour
     private bool waitWait;
 
 
-    void Update()
+    void FixedUpdate()
     {
         if (data.toGoal && !wait)
         {

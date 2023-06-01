@@ -15,4 +15,5 @@ public class MoneyCount : ScriptableObject
     public bool shopOpened;
     public bool templeOpened;
     public bool[] chestOpened;
+    public int chestCounter;
 }

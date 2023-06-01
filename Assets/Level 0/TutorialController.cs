@@ -25,7 +25,6 @@ public class TutorialController : MonoBehaviour
         data.movementDone = false;
         data.shootingDone = false;
         data.goalDone = false;
-        spaceGirl.transform.DOMoveX(45, 1f).SetRelative(true).SetLoops(1, LoopType.Incremental);
     }
 
     // Update is called once per frame

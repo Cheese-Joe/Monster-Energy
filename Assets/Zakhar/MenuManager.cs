@@ -5,9 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+    public MoneyCount data;
    public void PLayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (data.currentLVL == 0 && !data.gameBeaten)
+        {
+            SceneManager.LoadScene("Level 0");
+        }
+        else
+            SceneManager.LoadScene("Ship");
     }
 
     public void PlayBlackjack()

@@ -8,6 +8,9 @@ public class chestController : MonoBehaviour
     public int howMuchMoney;
     public AudioSource audioSource;
     public AudioClip coinClick;
+    public GameObject canvas;
+    public GameObject chest;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -25,7 +28,11 @@ public class chestController : MonoBehaviour
             audioSource.PlayOneShot(coinClick, 0.5f);
             money.Money = money.Money + howMuchMoney;
             money.chestOpened[money.currentLVL] = true;
-            Destroy(gameObject, 1f);
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            money.chestCounter++;
+            chest.SetActive(false);
+            canvas.SetActive(true);
+            Destroy(gameObject, 2f);
         }
     }
 }
