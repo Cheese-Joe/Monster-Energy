@@ -25,6 +25,7 @@ public class selectAttack : MonoBehaviour
     public AudioClip healSound;
     public GameObject death;
     private AudioSource audioSource;
+    public MoneyCount money;
 
 
     void Start()
@@ -46,6 +47,7 @@ public class selectAttack : MonoBehaviour
         }
         if (hp_boss.HP_current < 1)
         {
+            money.Money = money.Money + 200;
             Ship.SetActive(true);
             Instantiate(death);
             Destroy(selfDestructWall);

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 652aeb9ce424d2942b054052901c5d46, type: 3}
   m_Name: KillCountArena
   m_EditorClassIdentifier: 
-  KillCount: 98
+  KillCount: 0
   waitForAttack: 0
   score: 0
   round: 0

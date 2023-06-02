@@ -6,18 +6,14 @@ using UnityEngine;
 public class Reloading : MonoBehaviour
 {
     private Animator anim;
-    public float ammo = 30;
     private bool waitWait;
-
-
-
+    public HP_system hp;
+    public AudioClip[] audio;
+    public AudioSource audioSource;
 
     void Start()
     {
         anim = GetComponent<Animator>();
-        
-
-
     }
 
 
@@ -29,25 +25,29 @@ public class Reloading : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
-
+                audioSource.PlayOneShot(audio[0], 0.5f);
                 anim.SetTrigger("Reload");
             }
 
-            if ((Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Mouse0)) && !waitWait)
+            if ((Input.GetAxis("Fire2") == 1 || Input.GetAxis("Fire1") == 1) && !waitWait)
             {
-                if (ammo > 0)
+                if (hp.ammo > 0)
                 {
-                    anim.SetTrigger("Shoot");
-                    ammo--;
+                    if (Input.GetAxis("Fire1") == 1)
+                    {
+                        anim.SetTrigger("Shoot");
+                        hp.ammo--;
+                    }
 
                     this.GetComponent<shootingNormal>().enabled = true;
                 }
 
-                if (ammo <= 0)
+                if (hp.ammo <= 0)
                 {
                     this.GetComponent<shootingNormal>().enabled = false;
+                    audioSource.PlayOneShot(audio[1], 0.5f);
 
-                    
+
                 }
                 StartCoroutine(reloads());
                 
@@ -61,12 +61,12 @@ public class Reloading : MonoBehaviour
 
     public void ReloadingEvent()
     {
-        ammo = 30;
+        hp.ammo = hp.ammoMax;
     }
     IEnumerator reloads()
     {
         waitWait = true;
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.1f);
         waitWait = false;
     }
 }

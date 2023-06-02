@@ -16,4 +16,6 @@ MonoBehaviour:
   HP_current: 5
   current_gun: 0
   damage: 1
-  direction: 1
+  direction: 0
+  ammo: 50
+  ammoMax: 50

@@ -591,7 +591,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5751c532170323f4f93d0a0f59a62653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammo: 30
+  hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}
+  audio:
+  - {fileID: 8300000, guid: ffa8d16a967bd374aa9e8db634989849, type: 3}
+  - {fileID: 8300000, guid: 8aa3b963c2c75754b8b24f954dcbc26d, type: 3}
+  audioSource: {fileID: 5779434971927300790}
 --- !u!1 &7931995131114145319
 GameObject:
   m_ObjectHideFlags: 0

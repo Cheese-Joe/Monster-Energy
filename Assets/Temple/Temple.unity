@@ -422,7 +422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012573350444, guid: 14d81e2c407975245973a11cdfbeb902, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000012573350444, guid: 14d81e2c407975245973a11cdfbeb902, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1801,7 +1801,12 @@ MonoBehaviour:
   - The Gods are pleased with your donations. They promote you to the rank of Saint.
   - The Gods are very pleased with your donations. They promote you to the rank of
     God.
+  - The Gods won't tolerate such tomfoolery for long.
+  - 'You have inflicted the wrath of the Gods upon your soul. Hard Mode is on. '
+  - Jesus wept.
+  - The Gods bless you, for you have sinned.
   yourButton: {fileID: 4261055}
+  slider: {fileID: 1189414090}
 --- !u!1 &1189414088
 GameObject:
   m_ObjectHideFlags: 0

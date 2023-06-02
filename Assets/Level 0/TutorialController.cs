@@ -15,16 +15,20 @@ public class TutorialController : MonoBehaviour
     public GameObject spaceGirl;
     public MoneyCount money;
 
-    // Start is called before the first frame update
+
+
     void Start()
     {
         player.GetComponent<shootingNormal>().enabled = false;
+        player.GetComponent<Reloading>().enabled = false;
         player.GetComponent<Movement>().enabled = false;
         data.toGoal = false;
         data.toShooting = false;
         data.movementDone = false;
         data.shootingDone = false;
         data.goalDone = false;
+        spaceGirl.transform.DOMoveX(40f, 1f).SetRelative(true).SetLoops(1, LoopType.Incremental);
+
     }
 
     // Update is called once per frame
@@ -65,6 +69,8 @@ public class TutorialController : MonoBehaviour
                     text.text = data.shootingTutorial[textCounter];
                 player.GetComponent<shootingNormal>().enabled = false;
                 player.GetComponent<Movement>().enabled = false;
+                player.GetComponent<Reloading>().enabled = false;
+
                 textCounter++;
                 if (textCounter == 2)
                 {
@@ -76,6 +82,8 @@ public class TutorialController : MonoBehaviour
                 player.GetComponent<shootingNormal>().enabled = true;
                 player.GetComponent<Movement>().enabled = true;
                 cameraA.GetComponent<Camera2s>().enabled = true;
+                player.GetComponent<Reloading>().enabled = true;
+
                 data.shootingDone = true;
                 textCounter = 0;
                 spaceGirl.transform.DOMoveX(-40f, 1f).SetRelative(true).SetLoops(2, LoopType.Incremental);
@@ -86,6 +94,8 @@ public class TutorialController : MonoBehaviour
                     text.text = data.goalTutorial[textCounter];
                 player.GetComponent<shootingNormal>().enabled = false;
                 player.GetComponent<Movement>().enabled = false;
+                player.GetComponent<Reloading>().enabled = false;
+
                 textCounter++;
 
             }
@@ -93,6 +103,8 @@ public class TutorialController : MonoBehaviour
             {
                 player.GetComponent<shootingNormal>().enabled = true;
                 player.GetComponent<Movement>().enabled = true;
+                player.GetComponent<Reloading>().enabled = true;
+
                 data.goalDone = true;
                 textCounter = 0;
                 spaceGirl.transform.DOMoveX(-40f, 1f).SetRelative(true).SetLoops(2, LoopType.Incremental);
@@ -104,6 +116,8 @@ public class TutorialController : MonoBehaviour
             {
                 player.GetComponent<shootingNormal>().enabled = false;
                 player.GetComponent<Movement>().enabled = false;
+                player.GetComponent<Reloading>().enabled = false;
+
                 text.text = data.shootingTutorial[textCounter];
                 textCounter++;
             }
@@ -111,6 +125,8 @@ public class TutorialController : MonoBehaviour
             {
                 player.GetComponent<shootingNormal>().enabled = false;
                 player.GetComponent<Movement>().enabled = false;
+                player.GetComponent<Reloading>().enabled = false;
+
                 text.text = data.goalTutorial[textCounter];
                 textCounter++;
             }

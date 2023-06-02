@@ -11,4 +11,5 @@ public class TempleData : ScriptableObject
     public bool rainbow_bullet;
     public bool halo;
     public bool immortality;
+    public int tomfoolery;
 }

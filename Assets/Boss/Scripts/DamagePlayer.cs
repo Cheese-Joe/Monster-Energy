@@ -9,11 +9,17 @@ public class DamagePlayer : MonoBehaviour
     public bool destroyOnCollision;
     public GameObject soundSpawn;
     private Vector3 currentLocation;
+    public TempleData temple;
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag == "Player")
         {
+            if (temple.tomfoolery == 6)
+            {
+                damage = 9999;
+            }
             hp.HP_current = hp.HP_current - damage;
             currentLocation = transform.position;
             Instantiate(soundSpawn, currentLocation, Quaternion.Euler(new Vector3(0, 0, 0)));

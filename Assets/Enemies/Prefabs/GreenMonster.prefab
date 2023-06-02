@@ -161,6 +161,7 @@ MonoBehaviour:
   projectile: {fileID: 1025285306637258, guid: b2185d859683040468fe26e000c50004, type: 3}
   moveSound: {fileID: 8300000, guid: 452944efc40820740890ddc449477bf8, type: 3}
   hitSound: {fileID: 8300000, guid: 90a5a6649a1fbd44bbbe725519d0d770, type: 3}
+  temple: {fileID: 11400000, guid: 2516d9b52c10a7643b5ce1ae8c630b25, type: 2}
 --- !u!50 &6243222772777903841
 Rigidbody2D:
   serializedVersion: 4
