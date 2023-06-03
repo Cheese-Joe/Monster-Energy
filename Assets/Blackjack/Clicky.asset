@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebcf583c184a6d44b95df066cb257024, type: 3}
   m_Name: Clicky
   m_EditorClassIdentifier: 
-  GameStarted: 4
+  GameStarted: 0

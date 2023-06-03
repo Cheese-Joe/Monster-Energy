@@ -14,4 +14,43 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Blackjack/BlackJack.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Arena/Arena.unity
+    guid: e43f02fae19922e4f9deb3a120d9362e
+  - enabled: 1
+    path: Assets/Boss/Boss.unity
+    guid: 37a4d7ec70da42d488bf14709da0c414
+  - enabled: 1
+    path: Assets/Character/SampleScene.unity
+    guid: dee572514c6e92949bbe18620132779b
+  - enabled: 1
+    path: Assets/game over screen/GameWon.unity
+    guid: cea1feed43e9f934488930ed5fb40e79
+  - enabled: 1
+    path: Assets/game over screen/GO.unity
+    guid: 73dd713cb0c8631429f5644540ef3e01
+  - enabled: 1
+    path: Assets/game over screen/LVLSelect.unity
+    guid: f385a4c1b3ed09649b230e6a4534f6ce
+  - enabled: 1
+    path: Assets/game over screen/ScoreTable.unity
+    guid: f9a973ef6e0c65a4cbcccfd1f3ee2d37
+  - enabled: 1
+    path: Assets/Level 0/Level 0.unity
+    guid: b9490fdecf142894ea0a4ab7c438f1da
+  - enabled: 1
+    path: Assets/Level 1/Level One.unity
+    guid: b6c52929f72a6ad4aae7f9cec7fe64e4
+  - enabled: 1
+    path: Assets/ShipInside/Ship.unity
+    guid: ed41fdae0acc1de418808e9d4abee730
+  - enabled: 1
+    path: Assets/Shop/Shop.unity
+    guid: bec7674203a12924f934d03263a1a1c0
+  - enabled: 1
+    path: Assets/Temple/Temple.unity
+    guid: 9771f320e22c4e643b92ce088d225040
+  - enabled: 1
+    path: Assets/game over screen/Credits.unity
+    guid: 8475c7bffa10cd443922a54ad26acf32
   m_configObjects: {}

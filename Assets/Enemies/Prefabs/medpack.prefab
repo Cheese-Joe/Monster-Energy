@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4827964265030063041}
   - component: {fileID: 9124643619970853205}
   m_Layer: 0
-  m_Name: MedPack
+  m_Name: medpack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +70,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3566853126781859761}
   m_BodyType: 2
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -96,6 +96,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heal: 1
   hp: {fileID: 11400000, guid: 238b5c06dfbfede4d94e1d26deac764c, type: 2}
+  KillCount: {fileID: 11400000, guid: 04fd229506fc0e642936de1c9a9ff14b, type: 2}
+  soundSpawn: {fileID: 175212377350184874, guid: ab265aac515888949b91bce57dcdb82a,
+    type: 3}
 --- !u!1 &4413927671747510923
 GameObject:
   m_ObjectHideFlags: 0

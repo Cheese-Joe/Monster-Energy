@@ -4,16 +4,22 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Canvas
+  - Floor
+  - floorfloor
   - BlueBullet
+  - GreenBullet
+  - RedBullet
+  - Fireball
+  - Canvas
+  - medpack
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - 
+  - DeadZone
   - 
   - 
   - 

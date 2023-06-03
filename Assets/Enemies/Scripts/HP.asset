@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189af4e1dfce79a4bb00935da41d05b9, type: 3}
   m_Name: HP
   m_EditorClassIdentifier: 
-  HP_max: 10
-  HP_current: 10
+  HP_max: 5
+  HP_current: 5
+  current_gun: 0
+  damage: 1
+  direction: 0
+  ammo: 50
+  ammoMax: 50
