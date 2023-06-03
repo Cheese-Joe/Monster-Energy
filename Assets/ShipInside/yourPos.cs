@@ -9,10 +9,10 @@ public class yourPos : MonoBehaviour
 {
     public TMP_Text counterText;
     public string text;
-    public SceneAsset scene;
     private bool checkCollision;
     public ShipData ship;
     public Vector3 pos;
+    public string scene;
 
 
     void Update()
@@ -22,7 +22,7 @@ public class yourPos : MonoBehaviour
             counterText.text = text;
             if (Input.GetKeyDown(KeyCode.E))
             {
-                SceneManager.LoadScene(scene.name);
+                SceneManager.LoadScene(scene);
             }
         }
     }

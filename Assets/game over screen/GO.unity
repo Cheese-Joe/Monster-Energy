@@ -502,10 +502,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yourButton: {fileID: 1118930357}
   scene:
-  - {fileID: 102900000, guid: b9490fdecf142894ea0a4ab7c438f1da, type: 3}
-  - {fileID: 102900000, guid: b6c52929f72a6ad4aae7f9cec7fe64e4, type: 3}
-  - {fileID: 102900000, guid: dee572514c6e92949bbe18620132779b, type: 3}
-  - {fileID: 102900000, guid: 37a4d7ec70da42d488bf14709da0c414, type: 3}
+  - Level 0
+  - Level One
+  - SampleScene
+  - Boss
   data: {fileID: 11400000, guid: a7bccafcec4deca47b9ceac7d69169fa, type: 2}
   goToLVLSelect: 0
 --- !u!82 &1118930361
@@ -742,7 +742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yourButton: {fileID: 1137670935}
-  scene: {fileID: 102900000, guid: ed41fdae0acc1de418808e9d4abee730, type: 3}
+  scene: Ship
 --- !u!82 &1137670939
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1345,7 +1345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yourButton: {fileID: 1429888374}
-  scene: {fileID: 102900000, guid: bd14276c33b195e4690fa18ab31c81aa, type: 3}
+  scene: MainMenuScene
 --- !u!82 &1429888378
 AudioSource:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ public class PlayerDead : MonoBehaviour
 {
     public HP_system hp;
 
-    public SceneAsset scene;
+    public string scene;
     public TempleData data;
     
     void Start()
@@ -23,7 +23,7 @@ public class PlayerDead : MonoBehaviour
             hp.HP_current = hp.HP_max;
 
             if (!data.immortality)
-                SceneManager.LoadScene(scene.name);
+                SceneManager.LoadScene(scene);
 
         }
     }

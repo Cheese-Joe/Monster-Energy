@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Blackjack/BlackJack.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/game over screen/Credits.unity
+    guid: 8475c7bffa10cd443922a54ad26acf32
+  - enabled: 1
     path: Assets/Arena/Arena.unity
     guid: e43f02fae19922e4f9deb3a120d9362e
   - enabled: 1
@@ -50,7 +53,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Temple/Temple.unity
     guid: 9771f320e22c4e643b92ce088d225040
-  - enabled: 1
-    path: Assets/game over screen/Credits.unity
-    guid: 8475c7bffa10cd443922a54ad26acf32
   m_configObjects: {}

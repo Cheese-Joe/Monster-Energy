@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yourButton: {fileID: 651494518}
-  scene: {fileID: 102900000, guid: b6c52929f72a6ad4aae7f9cec7fe64e4, type: 3}
+  scene: Level One
 --- !u!114 &651494518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,7 +682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yourButton: {fileID: 783743306}
-  scene: {fileID: 102900000, guid: 37a4d7ec70da42d488bf14709da0c414, type: 3}
+  scene: Boss
 --- !u!114 &783743306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1270,7 +1270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yourButton: {fileID: 995065258}
-  scene: {fileID: 102900000, guid: e43f02fae19922e4f9deb3a120d9362e, type: 3}
+  scene: Arena
 --- !u!114 &995065258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1839,7 +1839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yourButton: {fileID: 1173862477}
-  scene: {fileID: 102900000, guid: ed41fdae0acc1de418808e9d4abee730, type: 3}
+  scene: Ship
 --- !u!1 &1267719124
 GameObject:
   m_ObjectHideFlags: 0
@@ -2166,7 +2166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yourButton: {fileID: 1792375983}
-  scene: {fileID: 102900000, guid: dee572514c6e92949bbe18620132779b, type: 3}
+  scene: SampleScene
 --- !u!114 &1792375983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2333,7 +2333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yourButton: {fileID: 1903502178}
-  scene: {fileID: 102900000, guid: b9490fdecf142894ea0a4ab7c438f1da, type: 3}
+  scene: Level 0
 --- !u!114 &1903502178
 MonoBehaviour:
   m_ObjectHideFlags: 0
