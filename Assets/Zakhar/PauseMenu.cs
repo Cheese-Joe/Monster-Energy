@@ -10,8 +10,10 @@ public class PauseMenu : MonoBehaviour
 
     public bool isPaused;
 
-    void Start()
+    void Awake()
     {
+        Time.timeScale = 1f;
+        isPaused = false;
         Pause.SetActive(false);
     }
 
