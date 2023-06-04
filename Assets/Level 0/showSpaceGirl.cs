@@ -9,6 +9,8 @@ public class showSpaceGirl : MonoBehaviour
     public TutorialData data;
     public GameObject spaceGirl;
     private bool waitWait;
+    private bool well;
+
 
 
     void FixedUpdate()
@@ -16,12 +18,22 @@ public class showSpaceGirl : MonoBehaviour
         if (data.toGoal && !wait)
         {
             wait = true;
-            spaceGirl.transform.DOMoveX(38f, 1f).SetRelative(true).SetLoops(2, LoopType.Incremental);
+            StartCoroutine(ShowSpaceGirl());
         }
         if (data.toShooting && !waitWait)
         {
             waitWait = true;
-            spaceGirl.transform.DOMoveX(46f, 1f).SetRelative(true).SetLoops(2, LoopType.Incremental);
+            StartCoroutine(ShowSpaceGirl());
         }
+    }
+    IEnumerator ShowSpaceGirl()
+    {
+        well = true;
+        for (int i = 0; i < 35; i++)
+        {
+            spaceGirl.transform.Translate(Vector3.right);
+            yield return new WaitForSeconds(0.01f);
+        }
+        well = false;
     }
 }
