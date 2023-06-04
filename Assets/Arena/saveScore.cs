@@ -8,7 +8,7 @@ public class saveScore : MonoBehaviour
 
     void Update()
     {
-        if (kill.score > kill.highScoreLVL[kill.highScoreLVL.Length])
-            kill.highScoreLVL[kill.highScoreLVL.Length] = kill.score;
+        if (kill.score > kill.highScoreLVL[kill.highScoreLVL.Length - 1])
+            kill.highScoreLVL[kill.highScoreLVL.Length - 1] = kill.score;
     }
 }

@@ -26,4 +26,8 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("Ship");
 
     }
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }

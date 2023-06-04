@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -14,7 +15,10 @@ public class TutorialController : MonoBehaviour
     public TMP_Text text;
     public GameObject spaceGirl;
     public MoneyCount money;
-
+    private bool waitWait;
+    private bool Epress;
+    public AudioSource audioSource;
+    public AudioClip clip;
 
 
     void Start()
@@ -27,12 +31,20 @@ public class TutorialController : MonoBehaviour
         data.movementDone = false;
         data.shootingDone = false;
         data.goalDone = false;
-        spaceGirl.transform.DOMoveX(40f, 1f).SetRelative(true).SetLoops(1, LoopType.Incremental);
+        audioSource.PlayOneShot(clip, 0.5f);
+        StartCoroutine(ShowSpaceGirl());
 
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Epress = true;
+        }
+    }
+    void FixedUpdate()
     {
         if (!money.gameBeaten)
         {
@@ -45,10 +57,12 @@ public class TutorialController : MonoBehaviour
         {
             hp.current_gun = 0;
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Epress == true)
         {
+            Epress = false;
             if (textCounter < data.movementTutorial.Length && !data.movementDone)
             {
+                audioSource.PlayOneShot(clip, 0.5f);
                 textCounter++;
                 if (textCounter < data.movementTutorial.Length)
                 {
@@ -61,7 +75,7 @@ public class TutorialController : MonoBehaviour
                 player.GetComponent<Movement>().enabled = true;
                 textCounter = 0;
                 data.movementDone = true;
-                spaceGirl.transform.DOMoveX(-40f, 1f).SetRelative(true).SetLoops(2, LoopType.Incremental);
+                StartCoroutine (HideSpaceGirl());
             }
             if (textCounter <= data.shootingTutorial.Length && !data.shootingDone && data.toShooting)
             {
@@ -70,6 +84,7 @@ public class TutorialController : MonoBehaviour
                 player.GetComponent<shootingNormal>().enabled = false;
                 player.GetComponent<Movement>().enabled = false;
                 player.GetComponent<Reloading>().enabled = false;
+                audioSource.PlayOneShot(clip, 0.5f);
 
                 textCounter++;
                 if (textCounter == 2)
@@ -86,7 +101,7 @@ public class TutorialController : MonoBehaviour
 
                 data.shootingDone = true;
                 textCounter = 0;
-                spaceGirl.transform.DOMoveX(-40f, 1f).SetRelative(true).SetLoops(2, LoopType.Incremental);
+                StartCoroutine(HideSpaceGirl());
             }
             if (textCounter <= data.goalTutorial.Length && !data.goalDone && data.toGoal)
             {
@@ -95,6 +110,7 @@ public class TutorialController : MonoBehaviour
                 player.GetComponent<shootingNormal>().enabled = false;
                 player.GetComponent<Movement>().enabled = false;
                 player.GetComponent<Reloading>().enabled = false;
+                audioSource.PlayOneShot(clip, 0.5f);
 
                 textCounter++;
 
@@ -107,7 +123,7 @@ public class TutorialController : MonoBehaviour
 
                 data.goalDone = true;
                 textCounter = 0;
-                spaceGirl.transform.DOMoveX(-40f, 1f).SetRelative(true).SetLoops(2, LoopType.Incremental);
+                StartCoroutine(HideSpaceGirl());
             }
         }
         if (textCounter == 0)
@@ -117,6 +133,7 @@ public class TutorialController : MonoBehaviour
                 player.GetComponent<shootingNormal>().enabled = false;
                 player.GetComponent<Movement>().enabled = false;
                 player.GetComponent<Reloading>().enabled = false;
+                audioSource.PlayOneShot(clip, 0.5f);
 
                 text.text = data.shootingTutorial[textCounter];
                 textCounter++;
@@ -126,6 +143,7 @@ public class TutorialController : MonoBehaviour
                 player.GetComponent<shootingNormal>().enabled = false;
                 player.GetComponent<Movement>().enabled = false;
                 player.GetComponent<Reloading>().enabled = false;
+                audioSource.PlayOneShot(clip, 0.5f);
 
                 text.text = data.goalTutorial[textCounter];
                 textCounter++;
@@ -140,7 +158,28 @@ public class TutorialController : MonoBehaviour
         cameraA.transform.DOMoveX(15f, 4f).SetRelative(true).SetLoops(1, LoopType.Incremental);
         yield return new WaitForSeconds(4f);
         text.text = data.shootingTutorial[textCounter];
+        audioSource.PlayOneShot(clip, 0.5f);
         textCounter = 4;
         data.toShooting = true;
+    }
+    IEnumerator ShowSpaceGirl()
+    {
+        waitWait = true;
+        for (int i = 0; i < 35; i++)
+        {
+            spaceGirl.transform.Translate(Vector3.right);
+            yield return new WaitForSeconds(0.01f);
+        }
+        waitWait = false;
+    }
+    IEnumerator HideSpaceGirl()
+    {
+        waitWait = true;
+        for (int i = 0; i < 35; i++)
+        {
+            spaceGirl.transform.Translate(Vector3.left);
+            yield return new WaitForSeconds(0.01f);
+        }
+        waitWait = false;
     }
 }

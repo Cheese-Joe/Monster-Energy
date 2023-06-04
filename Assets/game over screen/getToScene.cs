@@ -8,7 +8,7 @@ using UnityEditor;
 public class getToScene : MonoBehaviour
 {
     public Button yourButton;
-    public SceneAsset scene;
+    public string scene;
 
 
     void Awake()
@@ -19,7 +19,7 @@ public class getToScene : MonoBehaviour
 
     void TaskOnClick()
     {
-        SceneManager.LoadScene(scene.name);
+        SceneManager.LoadScene(scene);
     }
 
 }

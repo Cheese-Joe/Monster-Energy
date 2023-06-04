@@ -734,7 +734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yourButton: {fileID: 314218819}
-  scene: {fileID: 102900000, guid: ed41fdae0acc1de418808e9d4abee730, type: 3}
+  scene: Ship
 --- !u!1 &325891346
 GameObject:
   m_ObjectHideFlags: 0
