@@ -27,7 +27,7 @@ public class Jump : MonoBehaviour
         bool keyZ = Input.GetKeyDown(KeyCode.Z);
         bool keySpace = Input.GetKeyDown(KeyCode.Space);
 
-            if (keyZ && isGrounded || keySpace && isGrounded)
+        if (keyZ && isGrounded || keySpace && isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             audioSource.PlayOneShot(clip, 0.3f);
