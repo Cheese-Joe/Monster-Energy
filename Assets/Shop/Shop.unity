@@ -562,7 +562,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 185.00003, y: -132}
+  m_AnchoredPosition: {x: 185, y: -132}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &206636237
@@ -670,6 +670,7 @@ MonoBehaviour:
   maxNumberOfUpgrades: 0
   buy: {fileID: 8300000, guid: 974890956298a1f428cd91aab594904a, type: 3}
   cantBuy: {fileID: 8300000, guid: 518907564757ebe44a3bb167ab82ebaa, type: 3}
+  text: {fileID: 0}
 --- !u!82 &206636241
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1274,7 +1275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yourButton: {fileID: 809147860}
-  scene: {fileID: 102900000, guid: ed41fdae0acc1de418808e9d4abee730, type: 3}
+  scene: Ship
 --- !u!114 &809147860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1502,7 +1503,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -206.99994, y: -74}
+  m_AnchoredPosition: {x: -206.99988, y: -74}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &864556434
@@ -2928,6 +2929,7 @@ MonoBehaviour:
   maxNumberOfUpgrades: 4
   buy: {fileID: 8300000, guid: 974890956298a1f428cd91aab594904a, type: 3}
   cantBuy: {fileID: 8300000, guid: 518907564757ebe44a3bb167ab82ebaa, type: 3}
+  text: {fileID: 2053323886}
 --- !u!82 &1848974710
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3063,7 +3065,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -222.00003, y: -132}
+  m_AnchoredPosition: {x: -222, y: -132}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1896202847
@@ -3089,6 +3091,7 @@ MonoBehaviour:
   maxNumberOfUpgrades: 2
   buy: {fileID: 8300000, guid: 974890956298a1f428cd91aab594904a, type: 3}
   cantBuy: {fileID: 8300000, guid: 518907564757ebe44a3bb167ab82ebaa, type: 3}
+  text: {fileID: 1139666773}
 --- !u!114 &1896202848
 MonoBehaviour:
   m_ObjectHideFlags: 0

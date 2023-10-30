@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -124.00003, y: -23}
+  m_AnchoredPosition: {x: -124, y: -23}
   m_SizeDelta: {x: -710, y: -274}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &577857
@@ -1874,7 +1874,9 @@ MonoBehaviour:
   buttonStart: {fileID: 715223015}
   audioSource: {fileID: 1682702921}
   audioClip: {fileID: 8300000, guid: df9270cd19dfdf5429de0183c03f79ea, type: 3}
-  CC: {fileID: 11400000, guid: 48fe9be54e324184c90550bb953d3ca5, type: 2}
+  buttonsClickarooney: {fileID: 11400000, guid: c590a1eb991c9594591c548f153f83be,
+    type: 2}
+  CardData: {fileID: 11400000, guid: 48fe9be54e324184c90550bb953d3ca5, type: 2}
 --- !u!114 &715223018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6593,7 +6595,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -300.00003, y: -29}
+  m_AnchoredPosition: {x: -300, y: -29}
   m_SizeDelta: {x: -710, y: -274}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1870974997

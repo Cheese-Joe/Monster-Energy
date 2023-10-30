@@ -8,7 +8,7 @@ using UnityEditor;
 public class getToLVL : MonoBehaviour
 {
     public Button yourButton;
-    public SceneAsset[] scene;
+    public string[] scene;
     public MoneyCount data;
     public bool goToLVLSelect;
 
@@ -22,13 +22,13 @@ public class getToLVL : MonoBehaviour
     {
         if (!goToLVLSelect)
         {
-            SceneManager.LoadScene(scene[data.currentLVL].name);
+            SceneManager.LoadScene(scene[data.currentLVL]);
         }
         else
         {
             if (!data.gameBeaten)
             {
-                SceneManager.LoadScene(scene[data.currentLVL].name);
+                SceneManager.LoadScene(scene[data.currentLVL]);
             }
             else
             {

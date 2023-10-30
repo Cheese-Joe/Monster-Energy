@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -19,12 +20,19 @@ public class Buy : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip buy;
     public AudioClip cantBuy;
+    public TMP_Text text;
+
 
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
         Button btn = yourButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
+        if (WhatToBuy == "hp" && (shopData.HP_upgrade >= maxNumberOfUpgrades))
+            text.text = "MAX.";
+        if (WhatToBuy == "Gun" && (shopData.Gun_upgrade >= maxNumberOfUpgrades))
+            text.text = "MAX.";
+
     }
     void TaskOnClick()
     {
@@ -54,6 +62,10 @@ public class Buy : MonoBehaviour
                     shopData.HP_upgrade = shopData.HP_upgrade + 1;
                 }
             }
+            else
+            {
+                text.text = "MAX.";
+            }
         }
         if (WhatToBuy == "Gun")
         {
@@ -66,6 +78,10 @@ public class Buy : MonoBehaviour
                     hp.damage = hp.damage + upgrade;
                     shopData.Gun_upgrade = shopData.Gun_upgrade + 1;
                 }
+            }
+            else
+            {
+                text.text = "MAX.";
             }
         }
     }
